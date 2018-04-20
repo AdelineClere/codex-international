@@ -1,0 +1,12 @@
+{% extends "admin/layout_admin.html.twig" %}
+
+{% block body %}
+<div class="row">
+        <div class="col-md-9">
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            {{form_end(form)}}
+            <a class="btn btn-default" href="{{path('blog_dashboard')}}">Revenir au dashboard</a>
+        </div>
+    </div>{# empty Twig template #}
+{% endblock %}

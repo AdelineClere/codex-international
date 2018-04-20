@@ -1,0 +1,158 @@
+h2 {
+    font-color: #3f3934 !important;
+}
+
+/***************** header navigation **************/
+.btn-locale .btn .btn-gb{
+    width: 25px;
+    display: inline-block;
+    text-align: right;
+}
+
+.btn-locale .btn-fr{
+    width: 25px;  
+    float: right;
+}
+.logo{
+    width: 200px;  
+}
+.navigation .navbar .navbar-nav > li > a:hover, .navigation .navbar .navbar-nav > li > a:focus {
+    color:  #bd7718;
+} 
+
+/***************** nav 2 **************/
+.nav2 {
+    margin: 120px auto;
+    text-align: center;
+}
+
+a, a:focus, a:hover {
+    color: #72655c;
+}
+
+a:hover {
+    color: #bd7718;
+    font-size: 14px;
+}
+
+/***************** HOME **************/
+.container .body-home {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/***************** pg produits/cat **************/
+
+.liste-produits a {
+    border: 1px solid #72655c;
+    margin: 20px 0 20px 0;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.nav2 .nav-pills {
+    text-align: center;
+}
+
+.nav-pills>li {
+    display: inline-block;
+    float: none;
+}
+
+.nav-pills > li > a {
+    border-radius: 0px;
+    border: 0.3px solid #72655c;
+    
+}
+
+
+/***************** search **************/
+.input-search {
+    margin-top: 20px;
+    width: 200px;
+    float: right;
+}
+.btn-search {
+    margin-left: 1px !important;
+    background: #fff;
+    border-radius: 0;
+}
+
+
+/***************** footer **************/
+.adresse {
+    text-align: left;
+    line-height: 0 !important;
+    color: #72655 !important;
+}
+
+
+/***************** pg pdt **************/
+
+.aside {
+    margin-top: 65px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    border-color: #5C5C5C;
+    width: 200px;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+.btn-primary:hover {
+    background-color: #fff;
+}
+.btn-lg {
+    color: #5C5C5C;
+    padding-top: 11px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+liste-produits .a .produits_pdf {
+    border: 1px !important;
+}
+
+
+/* ------------- Fading-Carousel -------------- */
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/* ------------- login -------------- */
+
+.overly:before, .page-title:before, .slider:before {
+    background: #3f3934;
+}
+.annonce {
+    margin-left: 13px;
+}
+.annonce .apero-labo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 28px;
+    color: #bd7718;
+    
+}

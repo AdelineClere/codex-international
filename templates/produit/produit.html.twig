@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block slider %}
+    <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-interval="4000" data-ride="carousel" data-pause="null">
+            <!-- Indicators
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>    -->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{{ asset(category.image) }}" alt="slider1" style="width:100%;"> {# Ici j'ai mis un width pas a 100% ( il le faudrai normalement ) car les images sont trop petites et mal dimensionner  #}
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{{ asset(category.image2) }}" alt="slide2" style="width:100%;">{# Ici j'ai mis un width pas a 100% ( il le faudrai normalement ) car les images sont trop petites et mal dimensionner  #}
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{{ asset(category.image3) }}" alt="slide3" style="width:100%;">{# Ici j'ai mis un width pas a 100% ( il le faudrai normalement ) car les images sont trop petites et mal dimensionner  #}
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAV CATEGORIE + search -->           
+        <section class="nav2">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-5"><h2>{{ 'Codex_fabrication' | trans }}</h2>
+                        <ul class="nav nav-pills col-md-12 nav-categories">
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    {{ 'Category_1' | trans }} <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}">{{ category0.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}">{{ category1.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}">{{ category2.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}">{{ category3.titre }}</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}">{{ category4.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}">{{ category5.titre }}</a></li>
+                        </ul>  
+                    </div>
+
+                    <div class="col-md-7"><h2>{{ 'Codex_fournisseur' | trans }}</h2>
+
+                        <ul class="nav nav-pills col-md-12 nav-categories">
+                            <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}">{{ category6.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}">{{ category7.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}">{{ category8.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}">{{ category9.titre }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+    </div>
+</div>
+<!-- end NAV CATEGORIE + search -->
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Header with Background Image -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 class="mt-4">{{ category.titre }}</h2>
+                <p>{{ category.description }}</p>
+
+                {% for produit in produits %}
+
+                    <div class="liste-produits">                          
+                        <a class="produits-pdf" href="{{ asset(produit.pdf)}}" target="_blank">
+                            {{ produit.nom }}
+                        </a>                           
+                    </div>
+
+                {% endfor %}
+
+            </div>
+            {% for stocks in stock %}   
+                <div class="col-sm-4 aside">
+                    <a class="btn btn-primary btn-lg" href="{{ path('contact')}}">{{ 'devis' | trans }}</a><br>
+                    <a class="btn btn-primary btn-lg" href="{{asset(stocks.pdf_nom) }}" target="_blank">{{ 'stocks' | trans }}</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- /.row 
+        <div class="row">
+            <div class="col-sm-4 my-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset(category.image) }}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset(category.image2) }}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 my-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset(category.image3) }}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>  -->
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+
+
+{% endblock %}

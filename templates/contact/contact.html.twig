@@ -1,0 +1,79 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+
+
+    <!-- contact form start -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="row">
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+                <div class="col-md-6 col-md-offset-3 col-sm-12">
+                    <div class="block">
+
+                        <div class="form-group">
+                            {{ form_errors(form.prenom) }}
+                            {{ form_widget(form.prenom, { attr : { placeholder : 'First Name' } }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_errors(form.nom) }}
+                            {{ form_widget(form.nom, { attr : { placeholder : 'Last Name' } }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_errors(form.societe) }}
+                            {{ form_widget(form.societe, { attr : { placeholder : 'Firm' } }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_errors(form.telephone) }}
+                            {{ form_widget(form.telephone, { attr : { placeholder : 'Tel' } }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email, { attr : { placeholder : 'Email' } }) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-offset-3 col-sm-12">
+                    <div class="block">
+                        <div class="form-group">
+                            {{ form_errors(form.sujet) }}
+                            {{ form_widget(form.sujet, { attr : { placeholder : 'Subject' } }) }}                          
+                        </div>
+                        <div class="form-group-2">
+                            {{ form_errors(form.message) }}
+                            {{ form_widget(form.message, { attr : { placeholder : 'Message' } }) }}                            
+                        </div>
+                      
+                        <div>
+                            {{form_row(form.Envoyer) }}
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                {#{%if error%}
+                    <div class="error" id="error">Sorry Msg dose not sent</div>
+                    <div class="alert alert-danger">{{error.messageKey|trans(error.messageData, 'security') }}</div>
+                {%else%}
+                    <div class="success" id="success">Message Sent</div>
+                {%endif%}   #}                 
+            {{ form_widget(form._token) }}
+            {{ form_end(form,{'render_rest': false}) }} 
+        </div>
+        <div class=" contact-box row">
+            <div class="col-md-6 col-sm-12">
+                
+            </div>
+        </div>
+        <h4>Programme de fidélisation</h4>
+Codex International France a mis au point un programme de fidélisation original et convivial : l'apéro labo ( avec une typo sympa !) 
+Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection "Maison Kaprelian" pour enrichir vos moments de convivialités entre collègues.
+<a href="{{ path('loginregister') }}">Inscrivez-vous</a> dès à présent pour en bénéficier.
+        </div>
+    </section>
+                                            
+
+{% endblock %}

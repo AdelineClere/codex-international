@@ -1,0 +1,92 @@
+{% extends 'base2.html.twig' %}
+
+
+
+{% block body %}
+
+    {#{% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <!-- contact form start -->
+    <section class="contact-form">
+        <div class="container">   
+            <div class=" col-md-6 col-md-offset-1 enregistrement">
+                <div class="row">
+                    <form method="post" action="{{ path('add_user') }}" id="enregistr">
+                        <div class="block">
+                            <h3 class="annonce"><strong>Enregistrez-vous</strong> pour participer à notre programme de fidélisation original et convivial : <span class="apero-labo">l'apéro labo</span></h3>
+                            <br>
+                            <div class=" col-md-6">
+                                <div class="form-group">
+                                    <input name="prenom" type="text" class="form-control" placeholder="{{ 'prenom' | trans }}">
+                                </div>
+                            </div>
+                            <div class=" col-md-6">
+                                <div class="form-group">
+                                    <input name="nom" type="text" class="form-control" placeholder="{{ 'nom' | trans }}">
+                                </div>
+                            </div>
+                            <div class=" col-md-8">
+                                <div class="form-group">
+                                    <input name="societe" type="text" class="form-control" placeholder="{{ 'societe' | trans }}">
+                                </div>
+                            </div>
+                            <div class=" col-md-4">
+                                <div class="form-group">
+                                    <input name="telephone" type="text" class="form-control" placeholder="Tel">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <input name="email" type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class=" col-md-6">
+                                <div class="form-group">
+                                    <input name="password" type="password" class="form-control" placeholder="{{ 'mdpSaisi' | trans }}">
+                                </div>
+                            </div>
+                            <div class=" col-md-6">
+                                <div class="form-group">
+                                    <input name="password" type="password2" class="form-control" placeholder="{{ 'mdpReSaisi' | trans }}">
+                                </div>
+                            </div>
+                            <br>
+                            <div class=" col-md-12">
+                                <button class="btn btn-default col-xs-12" type="submit">{{ 'enregistrer' | trans }}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>#}
+    <section class="contact-form">
+        <div class="container">   
+
+            <div class="col-md-3 col-md-offset-1 connexion">
+                <div class="row">
+                    <form id="conmexion" action="{{ path('login') }}" method="post">
+                        <div class="block">
+                            <h3><strong>{{ 'connexion' | trans }}</strong></h3>
+                            <div class="form-group">
+                                <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Email" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" id="password" name="_password" placeholder="{{ 'mdp' | trans }}" />
+                            </div>
+                        </div>
+                        <button class="btn btn-default col-xs-12" type="submit">{{ 'connexion' | trans }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
+
+
+
+
+

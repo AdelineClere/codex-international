@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{# {{ productFound.pdf }} #}</h1>
+
+{% for product in productFound %}
+
+    <h2>{{ product.nom }}</h2>
+    
+{% endfor %}    
+    
+{% endblock %}

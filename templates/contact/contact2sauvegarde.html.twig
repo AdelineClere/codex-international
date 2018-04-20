@@ -1,0 +1,80 @@
+{% extends 'base2.html.twig' %}
+
+{% block body %}
+    <!-- Header Start -->
+    <section class="page-title bg-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"> 
+                    <div class="block">
+                        <h1 class="animated fadeInUp">Codex International <br>Best materials, Excellence services</h1>
+                    <!--    <p class="animated fadeInUp">xxxxxxxxx </br>  xxxxxx</p>    -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact form start -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="row">
+                <form id="contact-form" action="{{ path('send')}}" method="post">
+                    <div class="col-md-6 col-md-offset-3 col-sm-12">
+                        <div class="block">
+
+                            <div class="form-group">
+                                <input name="prenom" type="text" class="form-control" placeholder="{{ 'prenom' | trans }}">
+                            </div>
+                            <div class="form-group">
+                                <input name="nom" type="text" class="form-control" placeholder="{{ 'nom' | trans }}">
+                            </div>
+                            <div class="form-group">
+                                <input name="societe" type="text" class="form-control" placeholder="{{ 'societe' | trans }}">
+                            </div>
+                            <div class="form-group">
+                                <input name="telephone" type="tel" class="form-control" placeholder="Tel">
+                            </div>
+                            <div class="form-group">
+                                <input name="email" type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-md-offset-3 col-sm-12">
+                        <div class="block">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="{{ 'sujet' | trans }}" name="sujet">
+                            </div>
+                            <div class="form-group-2">
+                                <textarea name="message" class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <br>
+                            <button class="btn btn-default" type="submit">{{ 'envoyer' | trans }}</button>
+                        </div>
+                    </div>
+                    {#{%if error%}
+                        <div class="error" id="error">Sorry Msg dose not sent</div>
+                        <div class="alert alert-danger">{{error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {%else%}
+                        <div class="success" id="success">Message Sent</div>
+                    {%endif%}   #}                 
+                </form>
+            </div>
+            <div class=" contact-box row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="block">
+                    
+                            <a href="uploads/{{ asset(stock.pdf) }}">Télécharger l'état des stocks</a>
+                   
+                    </div>
+                </div>
+            </div>
+            <h4>Programme de fidélisation</h4>
+Codex International France a mis au point un programme de fidélisation original et convivial : l'apéro labo ( avec une typo sympa !) 
+Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection "Maison Kaprelian" pour enrichir vos moments de convivialités entre collègues.
+<a href="{{ path('login') }}">Inscrivez-vous</a> dès à présent pour en bénéficier.
+        </div>
+    </section>
+                                            
+
+{% endblock %}
