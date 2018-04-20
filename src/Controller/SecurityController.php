@@ -12,21 +12,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller {
 
-    /**
-     * @Route("/login", name="login")
-     */
-    public function login(AuthenticationUtils $authenticationUtils) {
-        // get the login error if there is one
-        $error = $authenticationUtils->getLastAuthenticationError();
-
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
-
-        return $this->render('security/login.html.twig', array(
-                    'last_username' => $lastUsername,
-                    'error' => $error,
-        ));
-    }
+    
 
     /**
      * @Route("/register", name="register")
@@ -68,7 +54,8 @@ class SecurityController extends Controller {
     /**
      * @Route("/loginregister", name="loginregister")
      */
-    public function LoginRegister(AuthenticationUtils $authenticationUtils, Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+    public function loginRegister(AuthenticationUtils $authenticationUtils, Request $request, UserPasswordEncoderInterface $passwordEncoder) {
+        
             // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
@@ -101,12 +88,13 @@ class SecurityController extends Controller {
             }
 
             return $this->render(
-                'security/login_register.html.twig',[
-                array('form' => $form->createView()), 
+                'security/login_register.html.twig',
+                
                 array(
+                    'form' => $form->createView(),
                     'last_username' => $lastUsername,
                     'error' => $error,
-                )]
+                )
             );
         }
 }

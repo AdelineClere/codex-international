@@ -4,18 +4,16 @@
 
 {% block body %}
 
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+
 
     <!-- contact form start -->
     <section class="contact-form">
         <div class="container">   
-      <!-- contact form start -->
- 
+            <!-- contact form start -->
+
             <div class=" col-md-6 col-md-offset-1 enregistrement">
                 <div class="row">
-                    <form method="post" action="{{ path('user_registration') }}" id="enregistr">
+                    <form method="post" action="{{ path('register') }}" id="enregistr">
                         <div class="block">
                             {{ form_start(form) }}
                             <h3 class="annonce"><strong>Enregistrez-vous</strong> pour participer à notre programme<br> de fidélisation original et convivial : <span class="apero-labo">l'apéro labo</span></h3>
@@ -25,14 +23,14 @@
                                     {{ form_row(form.prenom) }}
                                 </div>
                             </div>
-                                <div class=" col-md-6">
+                            <div class=" col-md-6">
                                 <div class="form-group">
-                                     {{ form_row(form.nom) }}
+                                    {{ form_row(form.nom) }}
                                 </div>
                             </div>
                             <div class=" col-md-8">
                                 <div class="form-group">
-                                     {{ form_row(form.societe) }}
+                                    {{ form_row(form.societe) }}
                                 </div>
                             </div>
                             <div class=" col-md-4">
@@ -50,13 +48,13 @@
                                     {{ form_row(form.plainPassword.first) }}
                                 </div>
                             </div>
-                                
+
                             <div class=" col-md-6">
                                 <div class="form-group">
                                     {{ form_row(form.plainPassword.second) }}
                                 </div>
                             </div>
-                                
+
                             <br>
                             <div class=" col-md-12">
                                 <button class="btn btn-default col-xs-12" type="submit">{{ 'enregistrer' | trans }}</button>
@@ -66,10 +64,13 @@
                     </form>
                 </div>
             </div>
-  
+
             <div class="col-md-3 col-md-offset-1 connexion">
+                {% if error is defined and error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
                 <div class="row">
-                    <form id="conmexion" action="{{ path('login') }}" method="post">
+                    <form id="conmexion" action="{{ path('loginregister') }}" method="post">
                         <div class="block">
                             <h3><strong>{{ 'connexion' | trans }}</strong></h3>
                             <div class="form-group">
