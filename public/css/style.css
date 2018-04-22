@@ -1,77 +1,64 @@
-h2 {
-    font-color: #3f3934 !important;
-}
 
 /***************** header navigation **************/
+
+.navigation {
+    margin-bottom: 40px;
+}
+.main-nav {
+    padding-right: -20px;
+}
+.bs-example-navbar-collapse-1 {
+    margin-right: -20px;
+    
+}
+.logo{
+    width: 200px;  
+} 
+.btn-locale {
+    padding-right: 25px;
+    padding-top: 10px;
+}
 .btn-locale .btn .btn-gb{
     width: 25px;
     display: inline-block;
     text-align: right;
 }
-
 .btn-locale .btn-fr{
     width: 25px;  
+}
+.btn-locale .btn {
+    padding: 0;
     float: right;
+    margin-left: 7px;
 }
-.logo{
-    width: 200px;  
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    background-color: #3f3934;
+    border-color: #3f3934;
 }
-.navigation .navbar .navbar-nav > li > a:hover, .navigation .navbar .navbar-nav > li > a:focus {
-    color:  #bd7718;
-} 
-
-/***************** nav 2 **************/
-.nav2 {
-    margin: 120px auto;
-    text-align: center;
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    background-color: #3f3934;
+    border-color: #3f3934;
 }
 
-a, a:focus, a:hover {
-    color: #72655c;
+/*
+.nav>li>a>img {
+    width: 25px;
+    max-width: 25px;
 }
+*/
+/***************** bloc parallaxe **************/
 
-a:hover {
-    color: #bd7718;
-    font-size: 14px;
+.page-title bg-2 {
 }
-
-/***************** HOME **************/
-.container .body-home {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-/***************** pg produits/cat **************/
-
-.liste-produits a {
-    border: 1px solid #72655c;
-    margin: 20px 0 20px 0;
-    padding: 5px;
-    text-align: center;
-    width: 300px;
-}
-
-.nav2 .nav-pills {
-    text-align: center;
-}
-
-.nav-pills>li {
-    display: inline-block;
-    float: none;
-}
-
-.nav-pills > li > a {
-    border-radius: 0px;
-    border: 0.3px solid #72655c;
-    
-}
-
 
 /***************** search **************/
+
 .input-search {
     margin-top: 20px;
-    width: 200px;
+    margin-right: 0;
+    width: 180px;
     float: right;
+    
 }
 .btn-search {
     margin-left: 1px !important;
@@ -79,42 +66,125 @@ a:hover {
     border-radius: 0;
 }
 
+/***************** nav 2 **************/
 
-/***************** footer **************/
-.adresse {
-    text-align: left;
-    line-height: 0 !important;
-    color: #72655 !important;
+.nav {
+    padding-left: 10px;
+}
+.nav2 {
+    margin: 120px 0;
+    text-align: center;
+}
+.nav2 h2 {
+    line-height: 10%;
+    margin-bottom: 40px;
+    color: #3f3934;
+}
+.nav-pills>li {
+    display: inline-block;
+    float: none;
+    margin-bottom: 10px;
+}
+.nav-pills > li > a {
+    border-radius: 0px;
+    border: 0.3px solid #72655c; 
+    text-transform: uppercase;
+}
+a, a:focus, a:hover {
+    color: #bd7718;
+}
+a:hover {
+    color: #72655c;
+    font-size: 14px;
+}
+.dropdown-menu>li>a {
+    color: #bd7718;
+    text-transform: uppercase;
+}
+.dropdown-menu>li>a:hover {
+    color: #72655c;
+    text-transform: uppercase;
+    line-height: 200%;
 }
 
+/***************** HOME / Why us **************/
 
-/***************** pg pdt **************/
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.container .why-us {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.body-home-intro {
+    font-size: 22px;
+    padding-bottom: 20px;
+    color: #bd7718;
+}
+.why-us h3 {
+    color: #3f3934;
+    font-weight: bold;
+}
 
+/***************** downloads **************/
+
+.telechargt {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/***************** pg produits **************/
+
+.liste-liens {
+    margin-left: -10px;
+}
+.liste-produits a {
+    margin-left: 0;
+    padding: 5px 30px;
+    background-color: #bd7718;
+    color: #fff;
+}
+.liste-produits a:hover {
+    font-weight: bold;
+}
+.liste-produits li {
+    margin-bottom: 15px;
+    list-style-type: none; 
+}
+.container .body-home {
+   
+}
 .aside {
     margin-top: 65px;
 }
-
 .btn-primary {
-    background-color: #fff;
-    border-color: #5C5C5C;
-    width: 200px;
+    float: right;
+    background-color: #72655c;
+    width: 300px;
     height: 40px;
     border-radius: 0;
-    margin-bottom: 20px;
+    border: none;
+    margin-top: 14px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-sizing: border-box;
 }
 .btn-primary:hover {
-    background-color: #fff;
+    background-color: #3f3934;
+    font-weight: bold;
 }
-.btn-lg {
-    color: #5C5C5C;
-    padding-top: 11px;
-    box-sizing: border-box;
-    font-size: 14px;
+.btn-primary.focus, .btn-primary:focus {
+    background-color: #72655c;
+    border-color: #72655c;
 }
+
 liste-produits .a .produits_pdf {
     border: 1px !important;
 }
-
 
 /* ------------- Fading-Carousel -------------- */
 
@@ -142,7 +212,7 @@ liste-produits .a .produits_pdf {
   z-index: 2;
 }
 
-/* ------------- login -------------- */
+/* ------------- login_register -------------- */
 
 .overly:before, .page-title:before, .slider:before {
     background: #3f3934;
@@ -154,5 +224,102 @@ liste-produits .a .produits_pdf {
     font-family: 'Kaushan Script', cursive;
     font-size: 28px;
     color: #bd7718;
-    
 }
+.contact-form .block button {
+    width: 100%;
+    height: 40px;
+    border-radius: 0;
+    background-color: #72655c;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+.btn-default {
+    width: 100%;
+    height: 40px;
+    border-radius: 0;
+    background-color: #72655c; 
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    margin-top: 25px;
+}
+
+
+/***************** espace/perso **************/
+.alerte-kdo h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 36px;
+    text-align: center;
+    color: #bd7718;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.maison-kaprelian h4 {
+    margin-left: 0;
+}
+.maison-kaprelian {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.img-kaprelian {
+    margin-bottom: 50px;
+}
+.kaprelian {
+    width: 100%;
+}
+
+/***************** contact **************/
+
+.annonce-progr-fidel-contact {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.titre-fidel-contact {
+    font-size: 22px;
+    color: #72655c;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.annonce-progr-fidel-contact p {
+    font-size: 20px;
+    color: #72655c; 
+    line-height: 170%;
+}
+.typo-manus {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 28px;
+    color: #bd7718;
+}
+
+
+
+/***************** footer **************/
+
+.footer .adresse-FR {
+}
+.footer p {
+    text-align: left;
+    line-height: 140%;
+    color: #3f3934;
+}
+.footer a {
+    color: #bd7718;
+}
+.footer a:hover{
+    color: #bd7718;
+    font-weight: bold;
+}
+.footer .copyright {
+    text-align: center;
+}
+.overly:before, .page-title:before, .slider:before {
+    opacity: 0.6;
+}
+.footer-codex .logo {
+   width: 400px; 
+}
+
+
+/***************** DASHBOARD **************/
+

@@ -3,28 +3,37 @@
 
 {% block body %}
 
-    <!-- contact form start -->
-    <section id="contact-form">
         <div class="container">
+            
             <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <div class="block">
+                <div class="col-md-8 col-md-offset-2 col-sm-12">
+                    <div class="alerte-kdo">
                           {% if not fidelite %}
-                              <h1>dommage</h1>
+                              <h3>Votre cumul de commandes a atteint 5000 euros, vous recevrez bientôt un coffret de la sélection "Maison Kaprelian" !</h3>
                           {% endif %}
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="block">
-                        <p>
-                        <h4>Programme de fidélisation</h4>
-                        Codex International France a mis au point un programme de fidélisation original et convivial : l'apéro labo ( avec une typo sympa !) 
-                        Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection "Maison Kaprelian" pour enrichir vos moments de convivialités entre collègues.
-                        Inscrivez vous dès à présent pour en bénéficier.
-                        </p>
-                    </div>
+            </div>   
+                    
+            <div class="row">    
+                <div class="col-md-8 col-md-offset-2 col-sm-12 maison-kaprelian">
+                    <p>
+                    <h2>Maison KAPRELIAN, l’épicerie fine de l'entreprise</h2>
+                        <h4 class="text-kaprelian"><strong>Maison Kaprélian</strong> vous propose une sélection de produits authentiques de nos régions de France, Après avoir fondé, et animé plus de 20 ans, l’enseigne traiteur "Madame est servie !"</h4>
+                        <h3><a href=http://www.maison-kaprelian.fr/ target="_blank">Visitez-le site de la <strong>Maison Kaprelian !</strong></a></h34>
+                        <br>
                 </div>
             </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-sm-12 img-kaprelian">
+                        <img class="kaprelian" src="../../uploads/kaprelian1.jpg" alt="kaprelian1">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <img class="kaprelian" src="../../uploads/kaprelian2.jpg" alt="kaprelian2">
+                    </p>
+                </div>           
+            </div>
+                    
         </div>
-    </section>
 {% endblock %}

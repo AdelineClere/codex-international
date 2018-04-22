@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block slider %}
-    <div class="container-fluid">
+    <div class="container">
         <div id="myCarousel" class="carousel slide carousel-fade" data-interval="4000" data-ride="carousel" data-pause="null">
             <!-- Indicators
             <ol class="carousel-indicators">
@@ -30,44 +30,65 @@
                 </div>
             </div>
         </div>
-
-        <!-- NAV CATEGORIE + search -->           
-        <section class="nav2">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-5"><h2>{{ 'Codex_fabrication' | trans }}</h2>
-                        <ul class="nav nav-pills col-md-12 nav-categories">
-                            <li role="presentation" class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    {{ 'Category_1' | trans }} <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}">{{ category0.titre }}</a></li>
-                                    <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}">{{ category1.titre }}</a></li>
-                                    <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}">{{ category2.titre }}</a></li>
-                                    <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}">{{ category3.titre }}</a></li>
-                                </ul>
-                            </li>
-                            <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}">{{ category4.titre }}</a></li>
-                            <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}">{{ category5.titre }}</a></li>
-                        </ul>  
-                    </div>
-
-                    <div class="col-md-7"><h2>{{ 'Codex_fournisseur' | trans }}</h2>
-
-                        <ul class="nav nav-pills col-md-12 nav-categories">
-                            <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}">{{ category6.titre }}</a></li>
-                            <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}">{{ category7.titre }}</a></li>
-                            <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}">{{ category8.titre }}</a></li>
-                            <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}">{{ category9.titre }}</a></li>
-                        </ul>
-                    </div>
-                </div>
-        </section>
     </div>
-</div>
-<!-- end NAV CATEGORIE + search -->
+                    
+    <!-- NAV CATEGORIE + search --> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-9">
+                <div class="input-group input-search">
+                    <form method="get">
+                        <input type="text" class="form-control"  name="form" placeholder="{{ 'search' | trans }}">
+                        <span class="input-group-btn">
+                        <!--    <input class="btn btn-search" type="submit" <span>glyphicon glyphicon-search</span>"<a href="{{ path('search') }}"></a> -->
+                            <input class="btn btn-search" type="submit" value=""><a href="{{ path('search') }}"></a>
+                        </span>
+                    </form>
+                </div>
+            </div>
+          
+            <section class="nav2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-5">
+                            <div class="titre-nav2">
+                            <h2>{{ 'Codex_fabrication' | trans }}</h2>
+                            <h2>{{ 'Codex_fabrication2' | trans }}</h2>
+                            </div>
+                            <ul class="nav nav-pills col-md-12 nav-categories">
+                                <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        {{ 'Category_1' | trans }} <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}">{{ category0.titre }}</a></li>
+                                        <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}">{{ category1.titre }}</a></li>
+                                        <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}">{{ category2.titre }}</a></li>
+                                        <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}">{{ category3.titre }}</a></li>
+                                    </ul>
+                                </li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}">{{ category4.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}">{{ category5.titre }}</a></li>
+                            </ul>  
+                        </div>
+
+                        <div class="col-md-7">
+                            <h2>{{ 'Codex_fournisseur' | trans }}</h2>
+                            <h2>{{ 'Codex_fournisseur2' | trans }}</h2>
+
+                            <ul class="nav nav-pills col-md-12 nav-categories">
+                                <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}">{{ category6.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}">{{ category7.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}">{{ category8.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}">{{ category9.titre }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+    <!-- end NAV CATEGORIE + search -->
+    
 {% endblock %}
 
 
@@ -82,16 +103,18 @@
             <div class="col-sm-8">
                 <h2 class="mt-4">{{ category.titre }}</h2>
                 <p>{{ category.description }}</p>
-
+            
+            <div class="col-sm-8 liste-liens">    
                 {% for produit in produits %}
-
-                    <div class="liste-produits">                          
+                <ul class="liste-produits">
+                    <li>                          
                         <a class="produits-pdf" href="{{ asset(produit.pdf)}}" target="_blank">
                             {{ produit.nom }}
                         </a>                           
-                    </div>
-
+                    </li>
+                </ul>
                 {% endfor %}
+            </div>
 
             </div>
             {% for stocks in stock %}   
@@ -100,7 +123,7 @@
                     <a class="btn btn-primary btn-lg" href="{{asset(stocks.pdf_nom) }}" target="_blank">{{ 'stocks' | trans }}</a>
                 </div>
             {% endfor %}
-        </div>
+            </div>
 
         <!-- /.row 
         <div class="row">

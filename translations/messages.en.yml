@@ -4,6 +4,7 @@ mdp: Password
 mdpSaisi: Enter a password
 mdpReSaisi: Re-enter your password
 enregistrer: Register
+envoi: Send
 home: 'Why us?'
 downloads: Downloads
 espace: 'Your space'
@@ -16,8 +17,10 @@ envoyer: Send Message
 societe: Firm
 devis: Request a quote
 stocks: Stocks status
-Codex_fabrication: Codex International Manufacturing & Services
-Codex_fournisseur: Codex International Supplier
+Codex_fabrication: Codex International
+Codex_fabrication2: Manufacturing & Services
+Codex_fournisseur: Codex International
+Codex_fournisseur2: Supplier
 Category_1: Thin film materials
 Category_2: Sputtering target
 Category_3: Evaporation material

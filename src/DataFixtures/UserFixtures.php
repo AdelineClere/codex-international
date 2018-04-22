@@ -11,9 +11,9 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $admin = new User();
-        $admin->setNom('test');
-        $admin->setPrenom('stephane');
-        $admin->setSociete('codexInt');
+        $admin->setNom('Seguier');
+        $admin->setPrenom('Stephane');
+        $admin->setSociete('Codex International');
         $admin->setEmail('admin@fake.fr');
         $admin->setTelephone('0612345678');
         $admin->setcumul_commande('0');
@@ -23,8 +23,8 @@ class UserFixtures extends Fixture
         $manager->flush();
         
         $admin = new User();
-        $admin->setNom('clere');
-        $admin->setPrenom('adeline');
+        $admin->setNom('Clere');
+        $admin->setPrenom('Adeline');
         $admin->setSociete('WF3');
         $admin->setEmail('adeline@clere.me');
         $admin->setTelephone('0662299584');

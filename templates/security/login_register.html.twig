@@ -20,41 +20,40 @@
                             <br>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.prenom) }}
+                                    {{ form_row(form.prenom, { attr : { placeholder : 'First Name' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.nom) }}
+                                    {{ form_row(form.nom, { attr : { placeholder : 'Last Name' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-8">
                                 <div class="form-group">
-                                    {{ form_row(form.societe) }}
+                                    {{ form_row(form.societe, { attr : { placeholder : 'Firm' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-4">
                                 <div class="form-group">
-                                    {{ form_row(form.telephone) }}
+                                    {{ form_row(form.telephone, { attr : { placeholder : 'Tel' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
-                                    {{ form_row(form.email) }}
+                                    {{ form_row(form.email, { attr : { placeholder : 'Email' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.first) }}
+                                    {{ form_row(form.plainPassword.first, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
 
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.second) }}
+                                    {{ form_row(form.plainPassword.second, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
-
                             <br>
                             <div class=" col-md-12">
                                 <button class="btn btn-default col-xs-12" type="submit">{{ 'enregistrer' | trans }}</button>

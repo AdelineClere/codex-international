@@ -2,16 +2,22 @@
 
 {% block body %}
 
+    <!-- pdf Stocks -->
+    {# {% for stocks in stock %}  
+        <div class="col-md-6 col-md-offset-3 col-sm-12">
+            <h4>Télécharger l'état des<a href="{{asset(stocks.pdf_nom) }}" target="_blank">{{ 'stocks' | trans }}</a></h4>
+        </div>
+    {% endfor %}    #}
 
-    <!-- contact form start -->
-    <section class="contact-form">
+    <!-- contact form start --> 
+    <section class="contact-form contact-codex">
         <div class="container">
             <div class="row">
                 {{ form_start(form) }}
                 {{ form_errors(form) }}
                 <div class="col-md-6 col-md-offset-3 col-sm-12">
                     <div class="block">
-
+                        
                         <div class="form-group">
                             {{ form_errors(form.prenom) }}
                             {{ form_widget(form.prenom, { attr : { placeholder : 'First Name' } }) }}
@@ -32,11 +38,7 @@
                             {{ form_errors(form.email) }}
                             {{ form_widget(form.email, { attr : { placeholder : 'Email' } }) }}
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-md-offset-3 col-sm-12">
-                    <div class="block">
+                    
                         <div class="form-group">
                             {{ form_errors(form.sujet) }}
                             {{ form_widget(form.sujet, { attr : { placeholder : 'Subject' } }) }}                          
@@ -45,11 +47,11 @@
                             {{ form_errors(form.message) }}
                             {{ form_widget(form.message, { attr : { placeholder : 'Message' } }) }}                            
                         </div>
-                      
+                        <br>
                         <div>
-                            {{form_row(form.Envoyer) }}
+                            {{form_row(form.Envoyer, { attr : { placeholder : 'envoi' } }) }}
                         </div>
-
+                        
                     </div>
                 </div>
 
@@ -63,16 +65,18 @@
             {{ form_widget(form._token) }}
             {{ form_end(form,{'render_rest': false}) }} 
         </div>
-        <div class=" contact-box row">
-            <div class="col-md-6 col-sm-12">
-                
+        
+        
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12 annonce-progr-fidel-contact">
+                <h3 class="titre-fidel-contact">Programme de fidélisation</h3>
+                <p><strong>Codex International France</strong> a mis au point un programme de fidélisation original et convivial : <span class="typo-manus">l'apéro labo !</span>
+                    <br><strong>Dès 5000€/an,</strong> nos meilleurs clients et partenaires recevront un coffret de la sélection <strong>"Maison Kaprelian"</strong> pour enrichir vos moments de convivialités entre collègues.
+                    <br><a href="{{ path('loginregister') }}"><strong>Inscrivez-vous</strong></a> dès à présent pour en bénéficier !
+                    </p>
             </div>
         </div>
-        <h4>Programme de fidélisation</h4>
-Codex International France a mis au point un programme de fidélisation original et convivial : l'apéro labo ( avec une typo sympa !) 
-Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection "Maison Kaprelian" pour enrichir vos moments de convivialités entre collègues.
-<a href="{{ path('loginregister') }}">Inscrivez-vous</a> dès à présent pour en bénéficier.
-        </div>
+        
     </section>
                                             
 

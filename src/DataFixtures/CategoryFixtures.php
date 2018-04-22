@@ -42,7 +42,7 @@ A certificate of analysis is provided with each shipment.');
         $category2 = new Category();
 
         $category2
-                ->setImage("uploads/img_categ/evaporation/alliage.jpg")
+                ->setImage("uploads/img_categ/evaporation/metauxpurs.jpg")
                 ->setImage2("uploads/img_categ/evaporation/arsenides.jpg")
                 ->setImage3("uploads/img_categ/evaporation/metauxprecieux.jpg");
         $category2
