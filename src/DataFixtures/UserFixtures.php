@@ -16,7 +16,7 @@ class UserFixtures extends Fixture
         $admin->setSociete('Codex International');
         $admin->setEmail('admin@fake.fr');
         $admin->setTelephone('0612345678');
-        $admin->setcumul_commande('0');
+        $admin->setCumulCommande('0');
         $admin->setRoles('ROLE_USER|ROLE_ADMIN');
         $admin->setPassword(password_hash('admin', PASSWORD_BCRYPT));
         $manager->persist($admin);
@@ -28,7 +28,7 @@ class UserFixtures extends Fixture
         $admin->setSociete('WF3');
         $admin->setEmail('adeline@clere.me');
         $admin->setTelephone('0662299584');
-        $admin->setcumul_commande('0');
+        $admin->setCumulCommande('0');
         $admin->setRoles('ROLE_USER|ROLE_ADMIN');
         $admin->setPassword(password_hash('adelineWF3', PASSWORD_BCRYPT));
         $manager->persist($admin);
@@ -40,7 +40,7 @@ class UserFixtures extends Fixture
         $admin->setSociete('Alliance concep');
         $admin->setEmail('gducret@alliance-concept.com');
         $admin->setTelephone('none');
-        $admin->setcumul_commande('0');
+        $admin->setCumulCommande('0');
         $admin->setRoles('ROLE_USER');
         $admin->setPassword(password_hash('AllianceDucretAdminPass', PASSWORD_BCRYPT));
         $manager->persist($admin);
@@ -52,7 +52,7 @@ class UserFixtures extends Fixture
         $admin->setSociete('CEA');
         $admin->setEmail('femieux@cea.fr');
         $admin->setTelephone('none');
-        $admin->setcumul_commande('0');
+        $admin->setCumulCommande('0');
         $admin->setRoles('ROLE_USER');
         $admin->setPassword(password_hash('CEApassEmFr', PASSWORD_BCRYPT));
         $manager->persist($admin);

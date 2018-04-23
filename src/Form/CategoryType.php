@@ -5,9 +5,11 @@ namespace App\Form;
 use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use App\Form\CategoryTranslationType;
+use Uerka\TranslationFormBundle\Form\Type\TranslationsType;
 
 class CategoryType extends AbstractType
 {
@@ -17,8 +19,23 @@ class CategoryType extends AbstractType
             ->add('image', FileType::class, array('data_class' => null))
             ->add('image2', FileType::class, array('data_class' => null))
             ->add('image3', FileType::class, array('data_class' => null))
-            ->add('titre')
-            ->add('description')
+            ->add('translations',TranslationsType::class, [
+                'required_locales' => ['en'],
+                'fields' => [
+                    'titre' => [
+                        'widget_class' => TextType::class, // optional, default TextType::class
+                        'options' => [ // will be passed to field's options
+                            'label' => 'form_product.label.title',
+                        ],
+                    ],
+                    'description' => [
+                        'widget_class' => TextareaType::class,
+                        'options' => [
+                            'label' => 'form_product.label.description'
+                        ]
+                    ],
+                ],
+            ])
             ;
     }
 

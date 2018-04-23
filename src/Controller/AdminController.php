@@ -29,7 +29,7 @@ class AdminController extends Controller
      * @Route("/admin/user/delete/{id}", name="delete_user")
      */
     
-    public function deleteUser(User $user, ObjectManager $manager, UserRepository $userRepo)
+    public function deleteUser(User $user, ObjectManager $manager)
     {
         $manager->remove($user);
         $manager->flush();
@@ -55,7 +55,7 @@ class AdminController extends Controller
         if($formUser->isSubmitted() && $formUser->isValid())
         {
             $user->setRoles('ROLE_USER');
-            $user->setcumul_commande(0);
+            
             $user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT));
             $manager->persist($user);
             $manager->flush();
@@ -64,9 +64,7 @@ class AdminController extends Controller
         
         return $this->render('admin/edit_user.html.twig', [
            'form' => $formUser->createView() 
-        ]);
+        ]);  
         
-    }
- 
-    
+    }  
 }

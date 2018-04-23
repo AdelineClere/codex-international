@@ -305,6 +305,9 @@
     "twig/twig": {
         "version": "v2.4.8"
     },
+    "uerka/translation-form-bundle": {
+        "version": "0.4.3"
+    },
     "zendframework/zend-code": {
         "version": "3.3.0"
     },

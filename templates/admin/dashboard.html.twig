@@ -32,8 +32,8 @@
                   <th>Société</th>
                   <th>Téléphone</th>
                   <th>Rôles</th>
-                 <th>Commandes</th>
-                 <th>Actions</th>
+                  <th>Commandes</th>
+                  <th>Actions</th>
                   
                 </tr>
               </tfoot>
@@ -46,7 +46,7 @@
                   <td>{{user.societe}}</td>
                   <td>{{user.telephone}}</td>
                   <td>{% for role in user.roles %} {{ role}} {%endfor%}</td>
-                  <td>{{user.cumul_commande}}</td>
+                  <td>{{user.cumulCommande}}</td>
                  {# <td><a href="/admin/delete/user/4">...</td> #}
                   <td><a class="btn btn-danger" href="{{ path('delete_user', {'id' : user.id}) }}"><i class="fa fa-trash"></i></a>
                    <a class="btn btn-success" href="{{ path('edit_user', {'id' : user.id}) }}"><i class="fa fa-edit"></i></a></td>

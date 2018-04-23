@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Serializable;
@@ -47,6 +48,7 @@ class User implements UserInterface, Serializable
      * @ORM\Column(type="integer")
      */
     private $cumul_commande;
+    
     public function getId()
     {
         return $this->id;
@@ -68,7 +70,7 @@ class User implements UserInterface, Serializable
     
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min=5, max=50)
+     * @Assert\Length(min=5, max=255)
      */
     private $password;
     
@@ -126,11 +128,11 @@ class User implements UserInterface, Serializable
         $this->email = $email;
         return $this;
     }
-    public function getcumul_commande()
+    public function getCumulCommande()
     {
         return $this->cumul_commande;
     }
-    public function setcumul_commande(int $cumul_commande): self
+    public function setCumulCommande(int $cumul_commande): self
     {
         $this->cumul_commande = $cumul_commande;
         return $this;
