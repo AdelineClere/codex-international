@@ -19,13 +19,6 @@ class ProduitTranslationRepository extends ServiceEntityRepository
         parent::__construct($registry, ProduitTranslation::class);
     }
     
-        public function findAllByProduit($search) {
-        return $this->createQueryBuilder('p')
-                ->Where('p.nom LIKE :search ')
-                ->setParameter('search', "%$search%")
-                ->getQuery()
-                ->getResult();
-    }
 
 //    /**
 //     * @return ProduitTranslation[] Returns an array of ProduitTranslation objects

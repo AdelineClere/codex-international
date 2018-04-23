@@ -31,6 +31,17 @@ class ProduitRepository extends ServiceEntityRepository
                 ->where('c = :category')
                 ->setParameter('category', $category);
     }
+    
+    public function findAllByProduit($search) {
+        return $this->createQueryBuilder('p')
+                ->innerJoin('p.translations', 'pt')
+                ->innerJoin('p.category', 'c')
+                ->innerJoin('c.translations', 'ct')
+                ->Where('pt.nom LIKE :search ')
+                ->setParameter('search', "%$search%")
+                ->getQuery()
+                ->getResult();
+    }
 
 //    /**
 //     * @return Produit[] Returns an array of Produit objects

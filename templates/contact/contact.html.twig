@@ -55,6 +55,11 @@
                     </div>
                 </div>
 
+            {% for stocks in stock %}   
+                <div class="col-sm-4 aside">
+                    <h5><a href="{{ asset(stocks.pdf_nom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h5>
+                </div>
+            {% endfor %}
                 
                 {#{%if error%}
                     <div class="error" id="error">Sorry Msg dose not sent</div>
@@ -73,7 +78,7 @@
                 <p><strong>Codex International France</strong> a mis au point un programme de fidélisation original et convivial : <span class="typo-manus">l'apéro labo !</span>
                     <br><strong>Dès 5000€/an,</strong> nos meilleurs clients et partenaires recevront un coffret de la sélection <strong>"Maison Kaprelian"</strong> pour enrichir vos moments de convivialités entre collègues.
                     <br><a href="{{ path('loginregister') }}"><strong>Inscrivez-vous</strong></a> dès à présent pour en bénéficier !
-                    </p>
+                </p>
             </div>
         </div>
         

@@ -3,37 +3,40 @@
 
 {% block body %}
 
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-12">
-                    <div class="alerte-kdo">
-                          {% if not fidelite %}
-                              <h3>Votre cumul de commandes a atteint 5000 euros, vous recevrez bientôt un coffret de la sélection "Maison Kaprelian" !</h3>
-                          {% endif %}
-                    </div>
-                </div>
-            </div>   
-                    
-            <div class="row">    
-                <div class="col-md-8 col-md-offset-2 col-sm-12 maison-kaprelian">
-                    <p>
-                    <h2>Maison KAPRELIAN, l’épicerie fine de l'entreprise</h2>
-                        <h4 class="text-kaprelian"><strong>Maison Kaprélian</strong> vous propose une sélection de produits authentiques de nos régions de France, Après avoir fondé, et animé plus de 20 ans, l’enseigne traiteur "Madame est servie !"</h4>
-                        <h3><a href=http://www.maison-kaprelian.fr/ target="_blank">Visitez-le site de la <strong>Maison Kaprelian !</strong></a></h34>
-                        <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin_dashboard') }}">Aller sur le Dashboard</a>
+                {% endif %}
+                <div class="alerte-kdo">
+                    {% if fidelite %}
+                        <h3>Votre cumul de commandes a atteint 5000 euros, vous recevrez bientôt un coffret de la sélection "Maison Kaprelian" !</h3>
+                    {% endif %}
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-6 col-sm-12 img-kaprelian">
-                        <img class="kaprelian" src="../../uploads/kaprelian1.jpg" alt="kaprelian1">
+        </div>   
+
+        <div class="row">    
+            <div class="col-md-8 col-md-offset-2 col-sm-12 maison-kaprelian">
+                <p>
+                <h2>Maison KAPRELIAN, l’épicerie fine de l'entreprise</h2>
+                <h4 class="text-kaprelian"><strong>Maison Kaprélian</strong> vous propose une sélection de produits authentiques de nos régions de France, Après avoir fondé, et animé plus de 20 ans, l’enseigne traiteur "Madame est servie !"</h4>
+                <h3><a href=http://www.maison-kaprelian.fr/ target="_blank">Visitez-le site de la <strong>Maison Kaprelian !</strong></a></h34>
+                    <br>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <img class="kaprelian" src="../../uploads/kaprelian2.jpg" alt="kaprelian2">
-                    </p>
-                </div>           
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 img-kaprelian">
+                            <img class="kaprelian" src="../../uploads/kaprelian1.jpg" alt="kaprelian1">
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <img class="kaprelian" src="../../uploads/kaprelian2.jpg" alt="kaprelian2">
+                            </p>
+                        </div>           
+                    </div>
+
             </div>
-                    
-        </div>
-{% endblock %}
+        {% endblock %}

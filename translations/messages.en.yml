@@ -17,6 +17,7 @@ envoyer: Send Message
 societe: Firm
 devis: Request a quote
 stocks: Stocks status
+contactStock: Download Stock Status
 Codex_fabrication: Codex International
 Codex_fabrication2: Manufacturing & Services
 Codex_fournisseur: Codex International
