@@ -30,7 +30,19 @@ class UserFixtures extends Fixture
         $admin->setTelephone('0662299584');
         $admin->setcumul_commande('0');
         $admin->setRoles('ROLE_USER|ROLE_ADMIN');
-        $admin->setPassword(password_hash('adelineWF3', PASSWORD_BCRYPT));
+        $admin->setPassword(password_hash('adeline', PASSWORD_BCRYPT));
+        $manager->persist($admin);
+        $manager->flush();
+        
+        $admin = new User();
+        $admin->setNom('Chateaureynaud');
+        $admin->setPrenom('Quentin');
+        $admin->setSociete('WF3');
+        $admin->setEmail('quentin78480@yahoo.fr');
+        $admin->setTelephone('0658957240');
+        $admin->setcumul_commande('0');
+        $admin->setRoles('ROLE_USER|ROLE_ADMIN');
+        $admin->setPassword(password_hash('quentin', PASSWORD_BCRYPT));
         $manager->persist($admin);
         $manager->flush();
         

@@ -212,6 +212,10 @@ liste-produits .a .produits_pdf {
   z-index: 2;
 }
 
+.page-title{
+    padding: 0px;
+}
+
 /* ------------- login_register -------------- */
 
 .overly:before, .page-title:before, .slider:before {

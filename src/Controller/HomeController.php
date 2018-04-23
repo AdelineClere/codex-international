@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function root()
     {
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('espace_perso');
     }
     
     /**
@@ -22,8 +22,9 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        $locale = $request->getLocale();
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+            'locale' => $locale,
         ]);
     }
 }

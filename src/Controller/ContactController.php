@@ -2,16 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Form\ContactType;
-use App\Repository\StockRepository;
+use App\Repository\DownloadRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use App\Entity\Contact;
 
 class ContactController extends Controller {
     /**
@@ -55,7 +52,7 @@ class ContactController extends Controller {
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(\Swift_Mailer $mailer, Request $request) {
+    public function index(\Swift_Mailer $mailer, Request $request, DownloadRepository $download) {
 
         $contact = new Contact();
 
@@ -95,8 +92,10 @@ class ContactController extends Controller {
                 die();
             }
         }
+        $stock = $download->getStock();
         return $this->render('contact/contact.html.twig', [
-                    'form' => $formContact->createView()
+                    'form' => $formContact->createView(),
+                    'stock' => $stock,
         ]);
     }
 }
