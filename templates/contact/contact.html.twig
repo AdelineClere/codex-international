@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-sm-12 pdf-stocks">
                 {% for stocks in stock %}   
-                        <h4><a href="{{ asset(stocks.pdf_nom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h4>
+                        <h4><a href="{{ asset(stocks.pdfNom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h4>
                 {% endfor %}
                 </div>
             </div>
