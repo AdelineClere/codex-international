@@ -4,8 +4,9 @@
 <h1>{# {{ productFound.pdf }} #}</h1>
 
 {% for product in productFound %}
-
-    <h2>{{ product.nom }}</h2>
+    <h3>{{ product.category.titre }}</h3>
+    <a href="{{ asset(product.pdf) }}" >{{ product.nom }}</a>
+    <h5>{{ product.category.description }}</h5>
     
 {% endfor %}    
     
