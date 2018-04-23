@@ -85,7 +85,7 @@ class ContactController extends Controller {
 
             if($mailer->send($theFinallyMessage)){
                 return $this->render('emails/registration.html.twig',[
-                    'name'=> "Cher(e) ".$contact->prenom. " ".$contact->nom
+                    'name'=> $contact->prenom. " ".$contact->nom
                 ]);
             } else {
                 echo 'Une erreur est survenue lors de l\'envoi du message';

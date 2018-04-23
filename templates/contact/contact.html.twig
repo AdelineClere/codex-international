@@ -48,7 +48,7 @@
                             {{ form_widget(form.message, { attr : { placeholder : 'Message' } }) }}                            
                         </div>
                         <br>
-                        <div>
+                        <div class="envoyer">
                             {{form_row(form.Envoyer, { attr : { placeholder : 'envoi' } }) }}
                         </div> 
                     </div>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-sm-12 pdf-stocks">
                 {% for stocks in stock %}   
-                        <h4><a href="{{ asset(stocks.pdfNom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h4>
+                        <h3>>>> <a href="{{ asset(stocks.pdfNom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h3>
                 {% endfor %}
                 </div>
             </div>
@@ -77,9 +77,9 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-12 annonce-progr-fidel-contact">
                 <h3 class="titre-fidel-contact">Programme de fidélisation</h3>
-                <p><strong>Codex International France</strong> a mis au point un programme de fidélisation original et convivial : <span class="typo-manus">l'apéro labo !</span>
+                <p class="inscrivez-vous"><strong>Codex International France</strong> a mis au point un programme de fidélisation original et convivial : <span class="typo-manus">l'apéro labo !</span>
                     <br><strong>Dès 5000€/an,</strong> nos meilleurs clients et partenaires recevront un coffret de la sélection <strong>"Maison Kaprelian"</strong> pour enrichir vos moments de convivialités entre collègues.
-                    <br><a href="{{ path('loginregister') }}"><strong>Inscrivez-vous</strong></a> dès à présent pour en bénéficier !
+                    <br><a href="{{ path('loginregister') }}">Inscrivez-vous</a> dès à présent pour en bénéficier !
                 </p>
             </div>
         </div>

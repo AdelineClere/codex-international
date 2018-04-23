@@ -8,12 +8,14 @@
     padding-right: -20px;
 }
 .bs-example-navbar-collapse-1 {
-    margin-right: -20px;
-    
+    margin-right: -20px; 
 }
 .logo{
     width: 200px;  
 } 
+.navigation .navbar .navbar-nav > li > a:hover, .navigation .navbar .navbar-nav > li > a:focus {
+
+}
 .btn-locale {
     padding-right: 25px;
     padding-top: 10px;
@@ -32,15 +34,18 @@
     margin-left: 7px;
 }
 .btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
-    background-color: #3f3934;
-    border-color: #3f3934;
+/*    background-color: #3f3934;
+    border-color: #3f3934;*/
 }
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
-    background-color: #3f3934;
-    border-color: #3f3934;
+/*    background-color: #3f3934;
+    border-color: #3f3934;*/
 }
 .navigation .navbar .navbar-nav > li > a {
-    text-align: right;
+/*    text-align: right;*/
+}
+.fa fa-fw fa-sign-out {
+    
 }
 
 /***************** bloc parallaxe **************/
@@ -59,13 +64,14 @@
     background: #fff;
     border-radius: 0;
 }
-.loupe .fa fa-search {
+.input-search a {
     margin-left: 10px;
 }
+
 /***************** nav 2 **************/
 
 .nav {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 .nav2 {
     margin: 120px 0;
@@ -132,7 +138,6 @@ a:hover {
 
 /***************** pg produits **************/
 
-
 .container .body-home {
    
 }
@@ -165,8 +170,19 @@ a:hover {
     background-color: #72655c;
     border-color: #72655c;
 }
-.liste-liens {
-    margin-left: -15px;
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    background-color: #72655c;
+    border-color: #72655c; 
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    background-color: #72655c;
+    border-color: #72655c; 
+}
+.category-pdt p {
+    margin-bottom: 30px;
+}
+.liste-produits {
+    margin-left: -7px;
 }
 .liste-produits a {
     display: block;
@@ -174,6 +190,7 @@ a:hover {
     height: 22px;
     background-color: #bd7718;
     color: #fff;
+    text-transform: uppercase;
 }
 .liste-produits a:hover {
     font-weight: bold;
@@ -210,26 +227,24 @@ a:hover {
 .carousel-fade .carousel-control {
   z-index: 2;
 }
-
 .carousel-caption h1 {
     font-weight: 200;
     letter-spacing: 6px;
     align-items: center;
 }
-
 .fadeIn-home {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    text-align: center;p
+    text-align: center;
     margin: auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .fadeIn-home h1 {
-    font-weight: 200;
+    font-weight: 400;
     font-size: 40px;
     letter-spacing: 6px;
     text-transform: capitalize;
@@ -254,19 +269,10 @@ a:hover {
 .annonce {
     margin-left: 13px;
 }
-.annonce .apero-labo {
+.apero-labo {
     font-family: 'Kaushan Script', cursive;
     font-size: 28px;
     color: #bd7718;
-}
-.contact-form .block button {
-    width: 100%;
-    height: 40px;
-    border-radius: 0;
-    background-color: #72655c;
-    color: #fff;
-    font-size: 18px;
-    border: none;
 }
 .btn-default {
     width: 100%;
@@ -278,9 +284,23 @@ a:hover {
     border: none;
     margin-top: 25px;
 }
-
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: #3f3934;
+    background-color: #e6e6e6;
+}
 
 /***************** espace/perso **************/
+
+.acces-dashboard {
+    
+}
+.acces-dashboard a {
+    color: black;
+}
+.acces-dashboard a:hover {
+    font-size: 20px;
+    color: #bd7718;
+}
 .alerte-kdo h3 {
     font-family: 'Kaushan Script', cursive;
     font-size: 36px;
@@ -305,16 +325,22 @@ a:hover {
 
 /***************** contact **************/
 
-.typo-manus {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 28px;
-    color: #bd7718;
+.envoyer {
+    margin-top: 10px;
+}
+.contact-form .block button {
+    border-radius: 0;
 }
 .pdf-stocks {
     padding-left: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+.pdf-stocks h3 {
+    text-align: right;
 }
 .pdf-stocks a:hover {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 .annonce-progr-fidel-contact {
@@ -332,8 +358,25 @@ a:hover {
     color: #72655c; 
     line-height: 170%;
 }
-annonce-progr-fidel-contact a, a:focus, a:hover {
+.typo-manus {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 28px;
+    color: #bd7718;
+}
+.inscrivez-vous a:hover {
     font-size: 20px;
+    font-weight: bold;
+}
+.message-envoye {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.message-envoye a:hover {
+    font-size: 20px;
+    font-weight: bold;
+}
+h3 .apero-labo {
+    font-size: 24px;
 }
 /***************** footer **************/
 

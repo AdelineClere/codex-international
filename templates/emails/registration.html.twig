@@ -5,17 +5,15 @@
     
 <div class="container"
      <div class="row">
-         <div class="col-md-6 col-md-offset-3 col-sm-12">
-            <h6>Hi {{ name }}! You're successfully registered.</h6>
+         <div class="col-md-8 col-md-offset-2 col-sm-12 message-envoye">
+             <h3><em>{{ 'bonjour' | trans }} {{ name }},</em></h3>
             <h3>Votre message a été envoyé !</h3>
             <br>
-
-            <h4>Accédez à votre espace perso et <a href="{{ path('loginregister') }}">Inscrivez-vous</a>pour participer à notre programme fidélité :</h4> 
-            Codex International France a mis au point un programme de fidélisation original et convivial : l'apéro labo 
-            Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection "Maison Kaprelian" pour enrichir vos moments de convivialités entre collègues.
-            <a href="{{ path('loginregister') }}">Inscrivez-vous</a> dès à présent pour en bénéficier.
-         </div>
-         </div>
+            <h2>Accédez à votre espace perso et <a href="{{ path('loginregister') }}">inscrivez-vous </a>pour participer à notre programme fidélité :</h2> 
+            <h3>Codex International France a mis au point un programme de fidélisation original et convivial : <span class="apero-labo">l'apéro labo !</span><br>
+                Dès 5000€/an, nos meilleurs clients et partenaires recevront un coffret de la sélection <a href=http://www.maison-kaprelian.fr/ target="_blank">"Maison Kaprelian"</a> pour enrichir vos moments de convivialités entre collègues.<h3> 
+        </div>
+    </div>
 </div>
 
 {% endblock %}

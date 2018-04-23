@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Repository;
-
 use App\Entity\Produit;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-
 /**
  * @method Produit|null find($id, $lockMode = null, $lockVersion = null)
  * @method Produit|null findOneBy(array $criteria, array $orderBy = null)
@@ -24,16 +21,24 @@ class ProduitRepository extends ServiceEntityRepository
         return $this->createCategoryQB($category)->getQuery()->getResult();
     }
     
-    public function findMany()
+    public function createCategoryQB($category)
     {
         return $this->createQueryBuilder('p')
-                ->leftJoin('p.translations', 'pt')
-                ->addSelect('pt')
-                ->getQuery()->getResult();
+                ->leftJoin('p.category', 'c')
+                ->where('c = :category')
+                ->setParameter('category', $category);
     }
     
-    
-
+    public function findAllByProduit($search) {
+        return $this->createQueryBuilder('p')
+                ->innerJoin('p.translations', 'pt')
+                ->innerJoin('p.category', 'c')
+                ->innerJoin('c.translations', 'ct')
+                ->Where('pt.nom LIKE :search ')
+                ->setParameter('search', "%$search%")
+                ->getQuery()
+                ->getResult();
+    }
 //    /**
 //     * @return Produit[] Returns an array of Produit objects
 //     */
@@ -50,7 +55,6 @@ class ProduitRepository extends ServiceEntityRepository
         ;
     }
     */
-
     /*
     public function findOneBySomeField($value): ?Produit
     {
