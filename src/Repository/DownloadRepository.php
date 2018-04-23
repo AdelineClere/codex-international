@@ -28,14 +28,21 @@ class DownloadRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult(); 
     }
-    
-    public function getDowload() {
-        return $this->createQueryBuilder('d')
-                ->where('d.pdf_key = :download ')
-                ->setParameter('download', 'download')
+
+   public function getDownload() {
+        return $this->findDownload()
                 ->getQuery()
                 ->getResult(); 
     }
+    
+    public function findDownload() {
+        return $this->createQueryBuilder('d')
+                ->where('d.pdf_key = :download ')
+                ->setParameter('download', 'download')
+                ->leftJoin('d.translations', 'dt')
+                ->addSelect('dt'); 
+    }
+    
     
     
     

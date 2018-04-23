@@ -78,8 +78,8 @@
                                     <li><a href="{{ path('contact') }}">{{ 'contact' | trans }}</a></li>
                                         {% if is_granted('ROLE_USER') %}
                                            <li class="nav-item">
-                                                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                                                  <i class="fa fa-fw fa-sign-out"></i>{#{{ 'deconnexion' |trans }}#}</a>
+                                                <a class="nav-link" href="{{path('logout')}}">
+                                                <i class="fa fa-fw fa-sign-out"></i>{#{{ 'deconnexion' |trans }}#}</a>
                                               </li>
                                         {% endif %}
                                             
@@ -174,18 +174,20 @@
                         </p>
                     </div>
                     <div class="col-sm-4 col-xs-12">
-                        <a class="navbar-brand" href="{{ path('home') }}">
+                        <a href="{{ path('home') }}">
                         <img class="logo img-responsive" src="{{ asset("layout_front/images/logoCodex.png") }}" alt="LogoCodex">
                         </a>
                     </div> 
-                    <div class="col-xs-12">    
-                        <p class="copyright"> 2018 &copy; codex_international <a href="http://codex-international.com"></a>. All rights reserved.
-                        </p>
-                    </div>
                 </div>
             </div>
-        </footer>
-        <!-- end footer -->
+            <div class="row">
+                <div class="col-xs-12">    
+                    <p class="copyright"> 2018 &copy; codex_international <a href="http://codex-international.com"></a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 
         <!-- 
         Essential Scripts

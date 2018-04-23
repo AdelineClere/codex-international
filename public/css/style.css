@@ -39,17 +39,12 @@
     background-color: #3f3934;
     border-color: #3f3934;
 }
-
-/*
-.nav>li>a>img {
-    width: 25px;
-    max-width: 25px;
+.navigation .navbar .navbar-nav > li > a {
+    text-align: right;
 }
-*/
+
 /***************** bloc parallaxe **************/
 
-.page-title bg-2 {
-}
 
 /***************** search **************/
 
@@ -57,15 +52,16 @@
     margin-top: 20px;
     margin-right: 0;
     width: 180px;
-    float: right;
-    
+    float: right;  
 }
 .btn-search {
     margin-left: 1px !important;
     background: #fff;
     border-radius: 0;
 }
-
+.loupe .fa fa-search {
+    margin-left: 10px;
+}
 /***************** nav 2 **************/
 
 .nav {
@@ -136,22 +132,7 @@ a:hover {
 
 /***************** pg produits **************/
 
-.liste-liens {
-    margin-left: -10px;
-}
-.liste-produits a {
-    margin-left: 0;
-    padding: 5px 30px;
-    background-color: #bd7718;
-    color: #fff;
-}
-.liste-produits a:hover {
-    font-weight: bold;
-}
-.liste-produits li {
-    margin-bottom: 15px;
-    list-style-type: none; 
-}
+
 .container .body-home {
    
 }
@@ -161,17 +142,20 @@ a:hover {
 .btn-primary {
     float: right;
     background-color: #72655c;
-    width: 300px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
     border-radius: 0;
     border: none;
     margin-top: 14px;
-    margin-right: 20px;
+    margin-right: 0;
     margin-bottom: 5px;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
     box-sizing: border-box;
+}
+.btn-group-lg>.btn, .btn-lg {
+    padding-bottom: 25px;
 }
 .btn-primary:hover {
     background-color: #3f3934;
@@ -181,10 +165,25 @@ a:hover {
     background-color: #72655c;
     border-color: #72655c;
 }
-
-liste-produits .a .produits_pdf {
-    border: 1px !important;
+.liste-liens {
+    margin-left: -15px;
 }
+.liste-produits a {
+    display: block;
+    text-align: center;
+    height: 22px;
+    background-color: #bd7718;
+    color: #fff;
+}
+.liste-produits a:hover {
+    font-weight: bold;
+    color: #eee;
+}
+.liste-produits li {
+    margin-bottom: 10px;
+    list-style-type: none; 
+}
+
 
 /* ------------- Fading-Carousel -------------- */
 
@@ -212,10 +211,41 @@ liste-produits .a .produits_pdf {
   z-index: 2;
 }
 
-.page-title{
-    padding: 0px;
+.carousel-caption h1 {
+    font-weight: 200;
+    letter-spacing: 6px;
+    align-items: center;
 }
 
+.fadeIn-home {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;p
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fadeIn-home h1 {
+    font-weight: 200;
+    font-size: 40px;
+    letter-spacing: 6px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* mobile */
+@media (max-width: 580px){ 
+    .carousel-caption h1 {
+        font-weight: 200;
+        letter-spacing: 6px;
+        font-size: 18px;
+        line-height: auto;
+    }
+}
+    
 /* ------------- login_register -------------- */
 
 .overly:before, .page-title:before, .slider:before {
@@ -275,6 +305,18 @@ liste-produits .a .produits_pdf {
 
 /***************** contact **************/
 
+.typo-manus {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 28px;
+    color: #bd7718;
+}
+.pdf-stocks {
+    padding-left: 20px;
+}
+.pdf-stocks a:hover {
+    font-size: 18px;
+    font-weight: bold;
+}
 .annonce-progr-fidel-contact {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -290,14 +332,9 @@ liste-produits .a .produits_pdf {
     color: #72655c; 
     line-height: 170%;
 }
-.typo-manus {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 28px;
-    color: #bd7718;
+annonce-progr-fidel-contact a, a:focus, a:hover {
+    font-size: 20px;
 }
-
-
-
 /***************** footer **************/
 
 .footer .adresse-FR {

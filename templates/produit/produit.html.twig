@@ -103,9 +103,9 @@
         <div class="row">
             <div class="col-sm-8">
                 <h2 class="mt-4">{{ category.titre }}</h2>
-                <p>{{ category.description }}</p>
+                <p>{{ category.description | raw }}</p>
             
-            <div class="col-sm-8 liste-liens">    
+            <div class="col-sm-6 liste-liens">    
                 {% for produit in produits %}
                 <ul class="liste-produits">
                     <li>                          
@@ -116,12 +116,11 @@
                 </ul>
                 {% endfor %}
             </div>
-
             </div>
             {% for stocks in stock %}   
                 <div class="col-sm-4 aside">
                     <a class="btn btn-primary btn-lg" href="{{ path('contact')}}">{{ 'devis' | trans }}</a><br>
-                    <a class="btn btn-primary btn-lg" href="{{asset(stocks.pdf_nom) }}" target="_blank">{{ 'stocks' | trans }}</a>
+                    <a class="btn btn-primary btn-lg" href="{{asset(stocks.getPdfNom) }}" target="_blank">{{ 'stocks' | trans }}</a>
                 </div>
             {% endfor %}
             </div>

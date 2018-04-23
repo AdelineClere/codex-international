@@ -44,13 +44,12 @@ class Contact
     
      /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=5, max=50)
+     * @Assert\Length(min=5, max=150)
      */
     public $sujet;
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=150)
      */
     public $message;
     

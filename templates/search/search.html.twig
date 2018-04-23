@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
 {% block body %}
 <h1>{# {{ productFound.pdf }} #}</h1>
-
+<div class="container">
 {% for product in productFound %}
     <h3>{{ product.category.titre }}</h3>
     <a href="{{ asset(product.pdf) }}" >{{ product.nom }}</a>
     <h5>{{ product.category.description }}</h5>
     
 {% endfor %}    
-    
+</div>
 {% endblock %}
