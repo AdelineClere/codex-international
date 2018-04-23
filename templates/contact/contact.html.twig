@@ -50,28 +50,30 @@
                         <br>
                         <div>
                             {{form_row(form.Envoyer, { attr : { placeholder : 'envoi' } }) }}
-                        </div>
-                        
+                        </div> 
                     </div>
                 </div>
 
-            {% for stocks in stock %}   
-                <div class="col-sm-4 aside">
-                    <h5><a href="{{ asset(stocks.pdf_nom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h5>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 pdf-stocks">
+                {% for stocks in stock %}   
+                        <h4><a href="{{ asset(stocks.pdf_nom) }}" target="_blank">{{ 'contactStock' | trans }}</a></h4>
+                {% endfor %}
                 </div>
-            {% endfor %}
+            </div>
                 
                 {#{%if error%}
                     <div class="error" id="error">Sorry Msg dose not sent</div>
                     <div class="alert alert-danger">{{error.messageKey|trans(error.messageData, 'security') }}</div>
                 {%else%}
                     <div class="success" id="success">Message Sent</div>
-                {%endif%}   #}                 
+                {%endif%}   #}       
+                
             {{ form_widget(form._token) }}
             {{ form_end(form,{'render_rest': false}) }} 
         </div>
         
-        
+  
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-12 annonce-progr-fidel-contact">
                 <h3 class="titre-fidel-contact">Programme de fidélisation</h3>
