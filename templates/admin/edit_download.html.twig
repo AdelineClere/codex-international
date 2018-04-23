@@ -1,0 +1,36 @@
+{% extends "admin/layout_admin.html.twig" %}
+
+{% block body %}
+    <div class="row">
+        <div class="mx-auto col-md-9">
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            {{form_end(form)}}
+            <a class="btn btn-default" href="{{path('download_dashboard')}}">Revenir au dashboard</a>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.3/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+                .create(document.querySelector('#category_translations_en_description'))
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    </script>
+    <script>
+        ClassicEditor
+                .create(document.querySelector('#category_translations_fr_description'))
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    </script>    
+{% endblock %}

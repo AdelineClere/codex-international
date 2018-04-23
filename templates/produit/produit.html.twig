@@ -116,12 +116,11 @@
                 </ul>
                 {% endfor %}
             </div>
-
             </div>
             {% for stocks in stock %}   
                 <div class="col-sm-4 aside">
                     <a class="btn btn-primary btn-lg" href="{{ path('contact')}}">{{ 'devis' | trans }}</a><br>
-                    <a class="btn btn-primary btn-lg" href="{{asset(stocks.pdf_nom) }}" target="_blank">{{ 'stocks' | trans }}</a>
+                    <a class="btn btn-primary btn-lg" href="{{asset(stocks.getPdfNom) }}" target="_blank">{{ 'stocks' | trans }}</a>
                 </div>
             {% endfor %}
             </div>
