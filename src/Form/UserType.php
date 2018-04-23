@@ -20,15 +20,16 @@ class UserType extends AbstractType
             ->add('societe')
             ->add('telephone')
             ->add('email', EmailType::class)
-            ->add('cumul_commande')
-            ->add('plainPassword', RepeatedType::class, array(
+            ->add('cumul_commande')    
+        ;
+        
+        if(in_array('insertion', $options['validation_groups'])){
+            $builder->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'first_options'  => array('label' => 'Password'),
                 'second_options' => array('label' => 'Repeat Password'),
-            ))
-
-            
-        ;
+            ));
+        }
     }
 
     public function configureOptions(OptionsResolver $resolver)

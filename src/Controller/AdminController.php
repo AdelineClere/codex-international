@@ -42,11 +42,17 @@ class AdminController extends Controller
      */
     public function editUser(ObjectManager $manager, Request $request, User $user = null)
     {
+        
+        
         if($user === null)
         {
             $user = new User();
+            $group= 'insertion';
+        } else {
+            $group = 'edition';
+            
         }
-        $formUser = $this->createForm(UserType::class, $user)
+    $formUser = $this->createForm(UserType::class, $user, ['validation_groups'=>[$group]])
             ->add('Envoyer', SubmitType::class);
         
         // ... todo: validation du formulaire;
@@ -55,7 +61,6 @@ class AdminController extends Controller
         if($formUser->isSubmitted() && $formUser->isValid())
         {
             $user->setRoles('ROLE_USER');
-            
             $user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT));
             $manager->persist($user);
             $manager->flush();

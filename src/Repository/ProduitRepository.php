@@ -24,24 +24,15 @@ class ProduitRepository extends ServiceEntityRepository
         return $this->createCategoryQB($category)->getQuery()->getResult();
     }
     
-    public function createCategoryQB($category)
+    public function findMany()
     {
         return $this->createQueryBuilder('p')
-                ->leftJoin('p.category', 'c')
-                ->where('c = :category')
-                ->setParameter('category', $category);
+                ->leftJoin('p.translations', 'pt')
+                ->addSelect('pt')
+                ->getQuery()->getResult();
     }
     
-    public function findAllByProduit($search) {
-        return $this->createQueryBuilder('p')
-                ->innerJoin('p.translations', 'pt')
-                ->innerJoin('p.category', 'c')
-                ->innerJoin('c.translations', 'ct')
-                ->Where('pt.nom LIKE :search ')
-                ->setParameter('search', "%$search%")
-                ->getQuery()
-                ->getResult();
-    }
+    
 
 //    /**
 //     * @return Produit[] Returns an array of Produit objects

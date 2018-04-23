@@ -27,9 +27,18 @@ class CategoryRepository extends ServiceEntityRepository
                 ->getOneOrNullResult();   
     }
     
+    public function findMany()
+    {
+        return $this->createQueryBuilder('c')
+                ->leftJoin('c.translations', 'ct')
+                ->addSelect('ct')
+                ->getQuery()->getResult();
+    }
+    
     public function getCategoriesWithTranslations() {
         return $this->createQueryBuilder('c')
                 ->leftJoin('c.translations', 'ct')
+                ->addSelect('ct')
                 ->getQuery()
                 ->getResult();
     }
@@ -37,6 +46,7 @@ class CategoryRepository extends ServiceEntityRepository
     public function qb($locale) {
         return $this->createQueryBuilder('c')
                 ->leftJoin('c.translations', 'ct')
+                ->addSelect('ct')
                 ->where('ct.locale = :locale')
                 ->setParameter('locale', $locale);
     }

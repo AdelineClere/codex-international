@@ -40,7 +40,7 @@ class UserFixtures extends Fixture
         $admin->setSociete('WF3');
         $admin->setEmail('quentin78480@yahoo.fr');
         $admin->setTelephone('0658957240');
-        $admin->setcumul_commande('0');
+        $admin->setCumulCommande('0');
         $admin->setRoles('ROLE_USER|ROLE_ADMIN');
         $admin->setPassword(password_hash('quentin', PASSWORD_BCRYPT));
         $manager->persist($admin);

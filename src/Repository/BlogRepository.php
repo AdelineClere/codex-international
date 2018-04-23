@@ -18,6 +18,18 @@ class BlogRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Blog::class);
     }
+    
+    public function createBlogQB()
+    {
+        return $this->createQueryBuilder('bl')
+                ->leftJoin('bl.translations', 'blt')
+                ->addSelect('blt');
+    }
+    
+    public function findMany() 
+    {
+        return $this->createBlogQB()->getQuery()->getResult();
+    }
 
 //    /**
 //     * @return Blog[] Returns an array of Blog objects

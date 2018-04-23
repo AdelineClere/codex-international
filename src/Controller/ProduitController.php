@@ -20,7 +20,7 @@ class ProduitController extends Controller
     public function index(ProduitRepository $ProduitRepo)
     {
 
-        $produitList = $ProduitRepo ->findAll();
+        $produitList = $ProduitRepo ->findMany();
         return $this->render('admin/product_dashboard.html.twig', ['produits' => $produitList]);
     }
 

@@ -24,6 +24,19 @@ body.fixed-nav {
   padding-top: 1rem;
 }
 
+.jumbo-dash {
+    background: #72655c;
+    color: #FFF;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+    margin: 15px 0 15px 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+
 .scroll-to-top {
   position: fixed;
   right: 15px;
@@ -153,7 +166,7 @@ body.fixed-nav {
   }
   #mainNav .navbar-collapse .navbar-sidenav {
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;

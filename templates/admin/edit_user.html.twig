@@ -4,7 +4,9 @@
     
     <div class="row">
         <div class="col-md-9">
-            {{form(form)}}
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            {{form_end(form)}}
     <a class="btn btn-default" href="{{path('admin_dashboard')}}">Revenir au dashboard</a>
         </div>
     </div>

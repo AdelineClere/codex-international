@@ -47,7 +47,7 @@ class CategoryController extends Controller {
      * @Route("admin/category_dashboard/{page}", name="category_paginated", requirements={"page":"\d+"})
      */
     public function showCategoryAdmin(CategoryRepository $categoryRepo) {
-        $categoryList = $categoryRepo->findAll();
+        $categoryList = $categoryRepo->findMany();
         return $this->render('admin/category_dashboard.html.twig', ['categories' => $categoryList]);
     }
 

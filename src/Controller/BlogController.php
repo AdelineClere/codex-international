@@ -1,9 +1,9 @@
 <?php
 namespace App\Controller;
+
 use App\Entity\Blog;
 use App\Form\BlogType;
 use App\Repository\BlogRepository;
-use App\Repository\BlogTranslationRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -23,10 +23,10 @@ class BlogController extends Controller
     /**
      * @Route("admin/dashboard_blog", name="blog_dashboard")
      */
-    public function showBlogAdmin(BlogTranslationRepository $blogRepo)
+    public function showBlogAdmin(BlogRepository $blogRepo)
     {
-        $blogList = $blogRepo ->findAll();
-        return $this->render('blog/backoffice_blog.html.twig', ['blogs' => $blogList]);
+        $blogList = $blogRepo ->findMany();
+        return $this->render('admin/backoffice_blog.html.twig', ['blogs' => $blogList]);
     }
     
     /**
@@ -65,7 +65,7 @@ class BlogController extends Controller
             return $this->redirectToRoute('blog_dashboard');
         }
         
-        return $this->render('admin/backoffice_blog.html.twig', [
+        return $this->render('admin/edit_blog.html.twig', [
            'form' => $formBlog->createView() 
         ]);
     }

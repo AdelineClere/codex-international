@@ -55,7 +55,7 @@ class User implements UserInterface, Serializable
     }
     
     /**
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"insertion"})
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
@@ -71,6 +71,7 @@ class User implements UserInterface, Serializable
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=5, max=255)
+     * @Assert\NotBlank(groups={"insertion"})
      */
     private $password;
     
