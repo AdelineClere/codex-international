@@ -103,7 +103,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <h2 class="mt-4">{{ category.titre }}</h2>
-                <p>{{ category.description }}</p>
+                <p>{{ category.description | raw }}</p>
             
             <div class="col-sm-8 liste-liens">    
                 {% for produit in produits %}
