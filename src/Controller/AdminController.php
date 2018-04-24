@@ -46,6 +46,7 @@ class AdminController extends Controller
         
         if($user === null)
         {
+            // 'insertion' pour pvr eentrer new mdp ac new user
             $user = new User();
             $group= 'insertion';
         } else {

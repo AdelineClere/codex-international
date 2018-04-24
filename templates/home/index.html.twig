@@ -106,98 +106,99 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-offset-9">
-                <div class="input-group input-search">
-                    <form method="get" action="{{path('search')}}">
-                        <input type="text" class="loupe"  name="form" placeholder=" {{ 'search' | trans }}"> <a href="{{path('search')}}"> <i class="fa fa-search"></i></a></input>
-                    </form>
-                </div>
-            </div>
-    
-
-                </div>
-            </div>
-
-            <section class="nav2">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-5">
-                            <div class="titre-nav2">
-                                <h2>{{ 'Codex_fabrication' | trans }}</h2>
-                                <h2>{{ 'Codex_fabrication2' | trans }}</h2>
-                            </div>
-                            <ul class="nav nav-pills col-md-12 nav-categories">
-                                <li role="presentation" class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                        {{ 'Category_1' | trans }} <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}">{{ category0.titre }}</a></li>
-                                        <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}">{{ category1.titre }}</a></li>
-                                        <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}">{{ category2.titre }}</a></li>
-                                        <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}">{{ category3.titre }}</a></li>
-                                    </ul>
-                                </li>
-                                <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}">{{ category4.titre }}</a></li>
-                                <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}">{{ category5.titre }}</a></li>
-                            </ul>  
-                        </div>
-
-                        <div class="col-md-7">
-                            <h2>{{ 'Codex_fournisseur' | trans }}</h2>
-                            <h2>{{ 'Codex_fournisseur2' | trans }}</h2>
-
-                            <ul class="nav nav-pills col-md-12 nav-categories">
-                                <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}">{{ category6.titre }}</a></li>
-                                <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}">{{ category7.titre }}</a></li>
-                                <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}">{{ category8.titre }}</a></li>
-                                <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}">{{ category9.titre }}</a></li>
-                            </ul>
-                        </div>
+                <form method="get" action="{{path('search')}}">
+                    <div class="input-group input-search">
+                        <input type="text" class="loupe"  name="form" placeholder=" {{ 'search' | trans }}"> 
+                        <div class="input-group-addon"><button type="submit" class="btn btn-loupe"> <i class="fa fa-search"></i></button></input></div>
                     </div>
-            </section>
+                </form>
+            </div>
+
+
         </div>
     </div>
-    <!-- end NAV CATEGORIE + search -->  
 
-    <div class="container"> 
+    <section class="nav2">
         <div class="row">
-            <div class="col-sm-offset-1 col-sm-10 why-us">
-                <p class="body-home-intro">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <h3 class="body-home">Vision</h3>
+            <div class="col-md-12">
+                <div class="col-md-5">
+                    <div class="titre-nav2">
+                        <h2>{{ 'Codex_fabrication' | trans }}</h2>
+                        <h2>{{ 'Codex_fabrication2' | trans }}</h2>
+                    </div>
+                    <ul class="nav nav-pills col-md-12 nav-categories">
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                {{ 'Category_1' | trans }} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}">{{ category0.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}">{{ category1.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}">{{ category2.titre }}</a></li>
+                                <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}">{{ category3.titre }}</a></li>
+                            </ul>
+                        </li>
+                        <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}">{{ category4.titre }}</a></li>
+                        <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}">{{ category5.titre }}</a></li>
+                    </ul>  
+                </div>
+
+                <div class="col-md-7">
+                    <h2>{{ 'Codex_fournisseur' | trans }}</h2>
+                    <h2>{{ 'Codex_fournisseur2' | trans }}</h2>
+
+                    <ul class="nav nav-pills col-md-12 nav-categories">
+                        <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}">{{ category6.titre }}</a></li>
+                        <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}">{{ category7.titre }}</a></li>
+                        <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}">{{ category8.titre }}</a></li>
+                        <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}">{{ category9.titre }}</a></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+</div>
+</div>
+<!-- end NAV CATEGORIE + search -->  
+
+<div class="container"> 
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10 why-us">
+            <p class="body-home-intro">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="body-home">Vision</h3>
+            <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            <h3 class="body-home">Codex International dans le monde</h3>
+            <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            <h3 class="body-home">L'équipe</h3>
+            <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            {% if locale == 'fr' %}
+                <h3 class="body-home">CIR ! <strong>que en frç</strong> !</h3>
                 <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <br>
-                <h3 class="body-home">Codex International dans le monde</h3>
-                <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
-                <h3 class="body-home">L'équipe</h3>
-                <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
-                {% if locale == 'fr' %}
-                    <h3 class="body-home">CIR ! <strong>que en frç</strong> !</h3>
+            {% endif %}
+            <h3 class="body-home">Carrière/Emploi</h3>
+            <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            <h3 class="body-home">Nos partenariats</h3>
+            <h5 class="body-home">vacuum pump - all manufacturers in vacuum-guide.com<h5>
+                    <p class="body-home">      
+                        www.vacuum-guide.com
+                        manufacturers, suppliers, products, news and facts for engineers involved in the design or the operation of vacuum pumps and vacuum systems.
+                        <br>
+                        <a href=http://www.vacuum-guide.com/ target="_blank"><strong>vacuum guide</strong></a>
+                        <br>  
+                        <a href=http://inl.cnrs.fr/gdr-oxyfun/index.php/fr/ target="_blank"><strong>OXYFUN</strong></a></p>
+                    <br>
+                    <h3 class="body-home">Equipements</h3>
                     <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <br>
-                {% endif %}
-                <h3 class="body-home">Carrière/Emploi</h3>
-                <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <br>
-                <h3 class="body-home">Nos partenariats</h3>
-                <h5 class="body-home">vacuum pump - all manufacturers in vacuum-guide.com<h5>
-                        <p class="body-home">      
-                            www.vacuum-guide.com
-                            manufacturers, suppliers, products, news and facts for engineers involved in the design or the operation of vacuum pumps and vacuum systems.
-                            <br>
-                            <a href=http://www.vacuum-guide.com/ target="_blank"><strong>vacuum guide</strong></a>
-                            <br>  
-                            <a href=http://inl.cnrs.fr/gdr-oxyfun/index.php/fr/ target="_blank"><strong>OXYFUN</strong></a></p>
-                        <br>
-                        <h3 class="body-home">Equipements</h3>
-                        <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <br>
-                        <h3 class="body-home">Certifications</h3>
-                        <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        </div>  
-                        </div>
+                    <h3 class="body-home">Certifications</h3>
+                    <p class="body-home">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    </div>  
+                    </div>
 
 
 
@@ -207,4 +208,4 @@
 
 
 
-                    {% endblock %}
+                {% endblock %}

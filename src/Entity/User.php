@@ -54,6 +54,7 @@ class User implements UserInterface, Serializable
         return $this->id;
     }
     
+    /* groups.... => idem sur password = pour cacher
     /**
      * @Assert\NotBlank(groups={"insertion"})
      * @Assert\Length(max=4096)

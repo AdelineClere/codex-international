@@ -10,3 +10,26 @@
         </div>
     </div>{# empty Twig template #}
 {% endblock %}
+{% block javascripts %}
+    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.3/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+                .create(document.querySelector('#blog_translations_en_article'))
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    </script>
+    <script>
+        ClassicEditor
+                .create(document.querySelector('#blog_translations_fr_article'))
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+    </script>    
+{% endblock %}

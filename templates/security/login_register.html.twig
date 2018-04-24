@@ -7,7 +7,7 @@
 
 
     <!-- contact form start -->
-    <section class="contact-form">
+    <section>
         <div class="container">   
             <!-- contact form start -->
 
@@ -20,38 +20,38 @@
                             <br>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.prenom, { attr : { placeholder : 'First Name' } }) }}
+                                    {{ form_widget(form.prenom, { attr : { placeholder : 'First Name' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.nom, { attr : { placeholder : 'Last Name' } }) }}
+                                    {{ form_widget(form.nom, { attr : { placeholder : 'Last Name' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-8">
                                 <div class="form-group">
-                                    {{ form_row(form.societe, { attr : { placeholder : 'Firm' } }) }}
+                                    {{ form_widget(form.societe, { attr : { placeholder : 'Firm' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-4">
                                 <div class="form-group">
-                                    {{ form_row(form.telephone, { attr : { placeholder : 'Tel' } }) }}
+                                    {{ form_widget(form.telephone, { attr : { placeholder : 'Tel' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
-                                    {{ form_row(form.email, { attr : { placeholder : 'Email' } }) }}
+                                    {{ form_widget(form.email, { attr : { placeholder : 'Email' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.first, { attr : { placeholder : 'mdp' } }) }}
+                                    {{ form_widget(form.plainPassword.first, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
 
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.second, { attr : { placeholder : 'mdp' } }) }}
+                                    {{ form_widget(form.plainPassword.second, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
                             <br>
@@ -69,18 +69,20 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
                 <div class="row">
-                    <form id="conmexion" action="{{ path('loginregister') }}" method="post">
-                        <div class="block">
-                            <h3><strong>{{ 'connexion' | trans }}</strong></h3>
-                            <div class="form-group">
-                                <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Email" />
+                    <div class="col-md-12">
+                        <form id="conmexion" action="{{ path('loginregister') }}" method="post">
+                            <div class="block">
+                                <h3><strong>{{ 'connexion' | trans }}</strong></h3>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Email" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="password" id="password" name="_password" placeholder="{{ 'mdp' | trans }}" />
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="password" id="password" name="_password" placeholder="{{ 'mdp' | trans }}" />
-                            </div>
-                        </div>
-                        <button class="btn btn-default col-xs-12" type="submit">{{ 'connexion' | trans }}</button>
-                    </form>
+                            <button class="btn btn-default col-xs-12" type="submit">{{ 'connexion' | trans }}</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

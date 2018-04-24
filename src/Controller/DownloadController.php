@@ -14,6 +14,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 
 class DownloadController extends Controller
 {
+    /* affiche la pg en front */
     /**
      * @Route("/download", name="download")
      */
@@ -25,6 +26,7 @@ class DownloadController extends Controller
         ]);
     }
     
+    /* affiche la pg dashboard */
     /**
      * @Route("admin/dashboard/download", name="download_dashboard")
      */
@@ -36,6 +38,7 @@ class DownloadController extends Controller
         ]);
     }
     
+    /* pour suppr une entite de la table */
     /**
      * @Route("/admin/download/delete/{id}", name="delete_download")
      */
@@ -45,6 +48,7 @@ class DownloadController extends Controller
         return $this->redirectToRoute('download_dashboard');
     }
     
+    /* Pour edit ou ajout entité */
     /**
      * @Route("/admin/download/Add", name="add_download")
      * @Route("/admin/download/edit/{id}", name="edit_download")

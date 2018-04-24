@@ -23,6 +23,7 @@ class UserType extends AbstractType
             ->add('cumul_commande')    
         ;
         
+        // Si mdp est ds group 'insertion'(cf assert entity) => le mdp n'apparait pas en mode edit de user, est possibl que en insertion / Else > rien      
         if(in_array('insertion', $options['validation_groups'])){
             $builder->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,

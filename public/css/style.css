@@ -42,10 +42,10 @@
     border-color: #3f3934;*/
 }
 .navigation .navbar .navbar-nav > li > a {
-/*    text-align: right;*/
+    text-align: right;
 }
-.fa fa-fw fa-sign-out {
-    
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
 }
 
 /***************** bloc parallaxe **************/
@@ -66,6 +66,21 @@
 }
 .input-search a {
     margin-left: 10px;
+}
+
+.input-group-addon{
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.btn-loupe{
+    background: transparent;
+}
+
+.search-0 {
+    text-align: right;
+    color: #bd7718;
 }
 
 /***************** nav 2 **************/
@@ -245,8 +260,8 @@ a:hover {
 }
 .fadeIn-home h1 {
     font-weight: 400;
-    font-size: 40px;
-    letter-spacing: 6px;
+    font-size: 4vw;
+    letter-spacing: 3px;
     text-transform: capitalize;
     color: #fff;
 }

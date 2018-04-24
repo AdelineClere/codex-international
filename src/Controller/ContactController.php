@@ -84,7 +84,7 @@ class ContactController extends Controller {
             ;
 
             if($mailer->send($theFinallyMessage)){
-                return $this->render('emails/registration.html.twig',[
+                return $this->render('contact/registration.html.twig',[
                     'name'=> $contact->prenom. " ".$contact->nom
                 ]);
             } else {

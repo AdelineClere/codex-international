@@ -37,6 +37,7 @@ class DownloadRepository extends ServiceEntityRepository
     
     public function findDownload() {
         return $this->createQueryBuilder('d')
+                ->innerJoin('d.translations', 'dtr')
                 ->where('d.pdf_key = :download ')
                 ->setParameter('download', 'download')
                 ->leftJoin('d.translations', 'dt')

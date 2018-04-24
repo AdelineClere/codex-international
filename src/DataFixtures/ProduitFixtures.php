@@ -27,7 +27,7 @@ class ProduitFixtures extends Fixture implements DependentFixtureInterface {
                 ->translate("en")
                 ->setNom("Alloys & Ceramics");
         $manager->persist($product1b);
-        $product1->mergeNewTranslations();
+        $product1b->mergeNewTranslations();
         $product2 = new Produit();
         $product2
                 ->setCategory($this->getReference('Cibles de pulvérisation'))
