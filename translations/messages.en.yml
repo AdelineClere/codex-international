@@ -13,6 +13,7 @@ espace: 'Your space'
 blog: Blog
 contact: 'Contact us'
 search: Search
+search-null: No answer for your request
 prenom: First name
 nom: Last name
 envoyer: Send Message

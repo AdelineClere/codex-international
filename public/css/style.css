@@ -337,6 +337,10 @@ a:hover {
 .kaprelian {
     width: 100%;
 }
+.maison-kaprelian h3 a:hover {
+    font-size: 20px;
+    color: #72655c;
+}
 
 /***************** contact **************/
 
@@ -387,8 +391,9 @@ a:hover {
     margin-bottom: 40px;
 }
 .message-envoye a:hover {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
+    color: #72655c;
 }
 h3 .apero-labo {
     font-size: 24px;

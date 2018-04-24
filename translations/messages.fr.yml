@@ -13,6 +13,7 @@ espace: 'Votre espace'
 blog: Blog
 contact: Contactez-nous
 search: Rechercher
+search-null: Aucune réponse à votre recherche
 prenom: Prénom
 nom: Nom
 envoyer: Envoyer le message

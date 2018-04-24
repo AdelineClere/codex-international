@@ -7,7 +7,7 @@
                <!-- contact form start -->
  <section class="contact-form">
         <div class="container">   
-            <div class=" col-md-6 col-md-offset-1 enregistrement">
+            <div class=" col-md-6 col-md-offset-3 col-xs-12 enregistrement">
                 <div class="row">
                     <form method="post" action="{{ path('register') }}" id="enregistr">
                         <div class="block">
@@ -16,41 +16,40 @@
                             <br>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.prenom) }}
+                                    {{ form_widget(form.prenom, { attr : { placeholder : 'First Name' } }) }}
                                 </div>
                             </div>
-                                <div class=" col-md-6">
+                            <div class=" col-md-6">
                                 <div class="form-group">
-                                     {{ form_row(form.nom) }}
+                                    {{ form_widget(form.nom, { attr : { placeholder : 'Last Name' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-8">
                                 <div class="form-group">
-                                     {{ form_row(form.societe) }}
+                                    {{ form_widget(form.societe, { attr : { placeholder : 'Firm' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-4">
                                 <div class="form-group">
-                                    {{ form_row(form.telephone) }}
+                                    {{ form_widget(form.telephone, { attr : { placeholder : 'Tel' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
-                                    {{ form_row(form.email) }}
+                                    {{ form_widget(form.email, { attr : { placeholder : 'Email' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.first) }}
+                                    {{ form_widget(form.plainPassword.first, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
-                                
+
                             <div class=" col-md-6">
                                 <div class="form-group">
-                                    {{ form_row(form.plainPassword.second) }}
+                                    {{ form_widget(form.plainPassword.second, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>
-                                
                             <br>
                             <div class=" col-md-12">
                                 <button class="btn btn-default col-xs-12" type="submit">{{ 'enregistrer' | trans }}</button>

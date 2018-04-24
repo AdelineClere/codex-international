@@ -31,7 +31,7 @@ class SecurityController extends Controller {
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
             $user->setRoles('ROLE_USER');
-            $user->setcumul_commande(0);
+            $user->setCumulCommande(0);
 
             // 4) save the User!
             $entityManager = $this->getDoctrine()->getManager();

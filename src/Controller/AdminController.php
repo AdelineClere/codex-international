@@ -62,7 +62,10 @@ class AdminController extends Controller
         if($formUser->isSubmitted() && $formUser->isValid())
         {
             $user->setRoles('ROLE_USER');
-            $user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT));
+            if($group === 'insertion') {
+                $user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT));
+             
+            }
             $manager->persist($user);
             $manager->flush();
             return $this->redirectToRoute('admin_dashboard');
