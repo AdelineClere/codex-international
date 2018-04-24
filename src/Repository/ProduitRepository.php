@@ -39,6 +39,15 @@ class ProduitRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult();
     }
+    
+        
+    public function findMany()
+    {
+        return $this->createQueryBuilder('p')
+                ->leftJoin('p.translations', 'pt')
+                ->addSelect('pt')
+                ->getQuery()->getResult();
+    }
 //    /**
 //     * @return Produit[] Returns an array of Produit objects
 //     */
