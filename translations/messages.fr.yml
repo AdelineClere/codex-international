@@ -6,17 +6,18 @@ mdpSaisi: Saisissez un mot de passe
 mdpReSaisi: Re-saisissez votre mot de passe
 enregistrer: Inscrivez-vous
 envoi: Envoyer
+envoyer: Envoyer le message
 home: 'Pourquoi codex ?'
 downloads: Téléchargements
 download: Télécharger le
 espace: 'Votre espace'
 blog: Blog
 contact: Contactez-nous
+transmis: Votre message a été envoyé, nous vous contactons rapidement !
 search: Rechercher
 search-null: Aucune réponse à votre recherche
 prenom: Prénom
 nom: Nom
-envoyer: Envoyer le message
 societe: Société
 devis: Obtenir un devis
 stocks: Etat des stocks

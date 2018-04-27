@@ -11,43 +11,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends Controller {
-    /**
-     * //@Route("/contact", name="contact")
-     */
-    /*
-      public function index(StockRepository $stockRepo)
-      {
-      $contact = new Contact();
-      //traitement de l'affichage du seul lien pdf de STOCK ENTITY
-      $stock=$stockRepo->findAll();
-      //traitement de l'affichage du formulaire de contact
-      $formContact=$this->createForm(ContactType::class, $contact)
-      ->add('Envoyer', SubmitType::class);
-
-
-      if( $formContact->isSubmitted() && $formContact->isValid() )
-      {
-
-      /*---------------ENVOI DU MESSAGE-------------------------
-
-      $headers = "From: ".$contact->email." \r\n";
-      $headers .= "MIME-Version: 1.0 \r\n";
-      $headers .="Content-type: text/html; charset=utf-8 \r\n";
-
-      $message  =  "Nom: " . $contact->nom. "\nPrénom : " . $contact->prenom . "\nSociété : " . $contact->societe . "\nMessage : " .$contact->message;
-
-      $email="stephane.seguier@codex-international.com";
-      ($email,$contact->sujet,$message,$headers);
-
-      // mail( qui va recevoir le message ? , objet ? , message ? , qui envoie le message ? );
-      //*--------------FIN D ENVOI DU MESSAGE--------------------
-      }
-
-      return $this->render('contact/contact.html.twig', [
-      'stock'=> $stock,
-      'form' => $formContact->createView()
-      ]);
-      } */
 
     /**
      * @Route("/contact", name="contact")
@@ -64,7 +27,7 @@ class ContactController extends Controller {
         //var_dump($formContact->isSubmitted());
         
         if ($formContact->isSubmitted() && $formContact->isValid()) {
-            $message = "Nom: " . $contact->nom . "\nPrénom : " . $contact->prenom . "\nTel : " . $contact->telephone . "\nSociété : " . $contact->societe . "\nMessage : " . $contact->message;
+            $message = "Nom: " . $contact->nom . "\nPrénom : " . $contact->prenom . "\nTel : " . $contact->telephone . "\nSociété : " . $contact->societe . "\nMessage : " . $contact->message . "\nHoraires : " . $contact->horaires;
 
             $theFinallyMessage = (new \Swift_Message($contact->sujet))
 
@@ -92,6 +55,7 @@ class ContactController extends Controller {
                 die();
             }
         }
+        
         $stock = $download->getStock();
         return $this->render('contact/contact.html.twig', [
                     'form' => $formContact->createView(),

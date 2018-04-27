@@ -1,8 +1,21 @@
+p {
+    color: #72655c;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #3f3934;
+}
+a {
+    color: #bd7718
+}        
+a:focus, a:hover {
+    color: #72655c;
+}
+
 
 /***************** header navigation **************/
 
 .navigation {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .main-nav {
     padding-right: -20px;
@@ -14,7 +27,9 @@
     width: 200px;  
 } 
 .navigation .navbar .navbar-nav > li > a:hover, .navigation .navbar .navbar-nav > li > a:focus {
-
+    color: #bd7718;
+    font-size: 24px;
+    font-weight: lighter;
 }
 .btn-locale {
     padding-right: 25px;
@@ -33,14 +48,7 @@
     float: right;
     margin-left: 7px;
 }
-.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
-/*    background-color: #3f3934;
-    border-color: #3f3934;*/
-}
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
-/*    background-color: #3f3934;
-    border-color: #3f3934;*/
-}
+
 .navigation .navbar .navbar-nav > li > a {
     text-align: right;
 }
@@ -54,42 +62,38 @@
 /***************** search **************/
 
 .input-search {
-    margin-top: 20px;
-    margin-right: 0;
+    margin-top: 10px;
+    margin-right: -5px;
     width: 180px;
     float: right;  
 }
 .btn-search {
-    margin-left: 1px !important;
     background: #fff;
     border-radius: 0;
 }
-.input-search a {
-    margin-left: 10px;
-}
-
 .input-group-addon{
     padding: 0;
     background: transparent;
     border: none;
 }
-
 .btn-loupe{
     background: transparent;
 }
-
 .search-0 {
     text-align: right;
     color: #bd7718;
 }
-
+.pdt-search a:hover {
+    font-size: 28px;
+    font-weight: bold;
+}
 /***************** nav 2 **************/
 
 .nav {
     padding-left: 5px;
 }
 .nav2 {
-    margin: 120px 0;
+    margin: 50px 0 80px 0;
     text-align: center;
 }
 .nav2 h2 {
@@ -107,21 +111,34 @@
     border: 0.3px solid #72655c; 
     text-transform: uppercase;
 }
-a, a:focus, a:hover {
+.nav-categories a {
+    background: #F5F5F5;
     color: #bd7718;
 }
-a:hover {
-    color: #72655c;
-    font-size: 14px;
+.nav-categories .nav>li>a:focus, .nav>li>a:hover {
+    color: #bd7718;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
 }
+
 .dropdown-menu>li>a {
     color: #bd7718;
     text-transform: uppercase;
 }
 .dropdown-menu>li>a:hover {
-    color: #72655c;
+    color: #bd7718;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
     text-transform: uppercase;
     line-height: 200%;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: transparent;
+    border: none;
 }
 
 /***************** HOME / Why us **************/
@@ -143,19 +160,30 @@ a:hover {
     color: #3f3934;
     font-weight: bold;
 }
-
+.why-us a {
+    color: #bd7718
+}
+.why-us a:focus, a:hover {
+    color: #72655c;
+    font-size: 18px;
+}
 /***************** downloads **************/
 
 .telechargt {
     margin-top: 80px;
     margin-bottom: 80px;
 }
+.telechargt a {
+    font-weight: bold;
+}
+.telechargt a:focus, a:hover {
+    color: #72655c;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 /***************** pg produits **************/
 
-.container .body-home {
-   
-}
 .aside {
     margin-top: 65px;
 }
@@ -179,6 +207,7 @@ a:hover {
 }
 .btn-primary:hover {
     background-color: #3f3934;
+    font-size: 16px;
     font-weight: bold;
 }
 .btn-primary.focus, .btn-primary:focus {
@@ -202,14 +231,17 @@ a:hover {
 .liste-produits a {
     display: block;
     text-align: center;
+    font-size: 15px;
     height: 22px;
     background-color: #bd7718;
     color: #fff;
     text-transform: uppercase;
 }
 .liste-produits a:hover {
+    font-size: 17px;
     font-weight: bold;
-    color: #eee;
+    color: #fff;
+    background-color: #72655c;
 }
 .liste-produits li {
     margin-bottom: 10px;
@@ -299,9 +331,12 @@ a:hover {
     border: none;
     margin-top: 25px;
 }
-.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    color: #3f3934;
-    background-color: #e6e6e6;
+.btn-default.active, .btn-default:active, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+    color: #fff;
+    background-color: #bd7718;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
 
 /***************** espace/perso **************/
@@ -347,9 +382,13 @@ a:hover {
 .envoyer {
     margin-top: 10px;
 }
+
+
 .contact-form .block button {
     border-radius: 0;
 }
+
+
 .pdf-stocks {
     padding-left: 20px;
     margin-top: 0;
@@ -357,10 +396,15 @@ a:hover {
 }
 .pdf-stocks h3 {
     text-align: right;
+    font-size: 16px;
+    font-weight: bold;
 }
 .pdf-stocks a:hover {
     font-size: 20px;
     font-weight: bold;
+    background: none;
+    box-shadow: none;
+    
 }
 .annonce-progr-fidel-contact {
     margin-top: 30px;
@@ -409,10 +453,12 @@ h3 .apero-labo {
 }
 .footer a {
     color: #bd7718;
+    font-weight: bold;
 }
 .footer a:hover{
     color: #bd7718;
     font-weight: bold;
+    font-size: 18px;
 }
 .footer .copyright {
     text-align: center;

@@ -7,6 +7,7 @@ namespace App\Form;
 
 use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,7 +31,18 @@ class ContactType extends AbstractType
             ->add('telephone', TelType::class)
             ->add('email', EmailType::class)
             ->add('sujet',null,['required'=>false])
-            ->add('message', TextareaType::class)  
+            ->add('message', TextareaType::class) 
+                           
+           ->add('horaires', ChoiceType::class, array(
+                'choices' => array(
+                '8am-10am' => ('8am-10am'),
+                '10am-12am' => ('10am-12am'), 
+                '12pm-14pm' => ('12pm-14pm'), 
+                '14pm-16pm' => ('14pm-16pm'), 
+                '16pm-18pm' => ('16pm-18pm'),
+                '18pm-20pm' => ('18pm-20pm')
+            )))  
+                 
             ->getForm();
     }
     
@@ -41,4 +53,5 @@ class ContactType extends AbstractType
         ]);
     }
 }
-//make:migration est ce qui cree le fichier "version"
+
+

@@ -52,6 +52,10 @@ class Contact
      * @Assert\NotBlank()
      */
     public $message;
-    
-    
+      
+    /**
+     * @Assert\nullable=true)
+     */
+    public $horaires;
+      
 }

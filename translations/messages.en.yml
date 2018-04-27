@@ -6,17 +6,18 @@ mdpSaisi: Enter a password
 mdpReSaisi: Re-enter your password
 enregistrer: Register
 envoi: Send
+envoyer: Send Message
 home: 'Why us?'
 downloads: Downloads
 download: Download
 espace: 'Your space'
 blog: Blog
 contact: 'Contact us'
+transmis: Your message has been sent, we will contact you quickly!
 search: Search
 search-null: No answer for your request
 prenom: First name
 nom: Last name
-envoyer: Send Message
 societe: Firm
 devis: Request a quote
 stocks: Stocks status
