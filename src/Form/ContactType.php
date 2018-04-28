@@ -31,18 +31,17 @@ class ContactType extends AbstractType
             ->add('telephone', TelType::class)
             ->add('email', EmailType::class)
             ->add('sujet',null,['required'=>false])
-            ->add('message', TextareaType::class) 
-                           
-           ->add('horaires', ChoiceType::class, array(
+            ->add('message', TextareaType::class)                           
+            ->add('horaires', ChoiceType::class, array(
                 'choices' => array(
-                '8am-10am' => ('8am-10am'),
-                '10am-12am' => ('10am-12am'), 
-                '12pm-14pm' => ('12pm-14pm'), 
-                '14pm-16pm' => ('14pm-16pm'), 
-                '16pm-18pm' => ('16pm-18pm'),
-                '18pm-20pm' => ('18pm-20pm')
-            )))  
-                 
+                'Choose schedule / Choisissez un horaire' => ('-'),
+                '08:00 - 10:00 am / 08h - 10h' => ('08:00 - 10:00 am / 08h - 10h'),
+                '10:00 - 11:59 am / 10h - 12h' => ('10:00 - 11:59 am / 10h - 12h'), 
+                '00:01 - 02:00 pm / 12h - 14h' => ('00:01 - 02:00 pm / 12h - 14h'), 
+                '02:00 - 04:00 pm / 14h - 16h' => ('02:00 - 04:00 pm / 14h - 16h'), 
+                '04:00 - 06:00 pm / 16h - 18h' => ('04:00 - 06:00 pm / 16h - 18h'),
+                '06:00 - 08:00 pm / 18h - 20h' => ('06:00 - 08:00 pm / 18h - 20h')
+            )))                  
             ->getForm();
     }
     

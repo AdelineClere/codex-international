@@ -28,7 +28,11 @@
         <link rel="stylesheet" href="{{ asset("layout_front/plugins/slick-carousel/slick/slick.css") }}">
         <link rel="stylesheet" href="{{ asset("layout_front/plugins/slick-carousel/slick/slick-theme.css") }}">
 
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="{{ asset("layout_front/css/style.css") }}">
@@ -79,7 +83,7 @@
                                         {% if is_granted('ROLE_USER') %}
                                            <li class="nav-item">
                                                 <a class="nav-link" href="{{path('logout')}}">
-                                                <i class="fa fa-fw fa-sign-out"></i>{#{{ 'deconnexion' |trans }}#}</a>
+                                                <i class="fas fa-sign-out-alt"></i>{#{{ 'deconnexion' |trans }}#}</a>
                                               </li>
                                         {% endif %}
                                             

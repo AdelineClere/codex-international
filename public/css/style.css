@@ -87,8 +87,14 @@ a:focus, a:hover {
     font-size: 28px;
     font-weight: bold;
 }
+
 /***************** nav 2 **************/
 
+.fa-arrow-alt-circle-down {
+    font-size: 35px;
+    padding-bottom: 10px;
+    color: #72655c;
+}
 .nav {
     padding-left: 5px;
 }
@@ -96,10 +102,14 @@ a:focus, a:hover {
     margin: 50px 0 80px 0;
     text-align: center;
 }
+.why-us {
+    text-align: justify;
+}
 .nav2 h2 {
-    line-height: 10%;
+    line-height: 0;
     margin-bottom: 40px;
-    color: #3f3934;
+    color: #72655c;
+    font-size: 30px;
 }
 .nav-pills>li {
     display: inline-block;
@@ -108,7 +118,7 @@ a:focus, a:hover {
 }
 .nav-pills > li > a {
     border-radius: 0px;
-    border: 0.3px solid #72655c; 
+    border: 1px solid #72655c; 
     text-transform: uppercase;
 }
 .nav-categories a {
@@ -172,6 +182,7 @@ a:focus, a:hover {
 .telechargt {
     margin-top: 80px;
     margin-bottom: 80px;
+    text-align: justify;
 }
 .telechargt a {
     font-weight: bold;
@@ -190,7 +201,7 @@ a:focus, a:hover {
 .btn-primary {
     float: right;
     background-color: #72655c;
-    width: 200px;
+    width: 230px;
     height: 30px;
     border-radius: 0;
     border: none;
@@ -224,6 +235,7 @@ a:focus, a:hover {
 }
 .category-pdt p {
     margin-bottom: 30px;
+    text-align: justify;
 }
 .liste-produits {
     margin-left: -7px;
@@ -379,16 +391,26 @@ a:focus, a:hover {
 
 /***************** contact **************/
 
-.envoyer {
-    margin-top: 10px;
+.btn-envoyer {
+    margin-top: 20px;
 }
-
 
 .contact-form .block button {
     border-radius: 0;
 }
-
-
+.form-group-3 form-control {
+    border-radius: 0;
+}
+.label-contact {
+    margin-top: 15px;
+    font-weight: 500;
+}
+.form-control {
+    color: #555;
+}
+.form-control:focus {
+    border-color: #ccc
+}
 .pdf-stocks {
     padding-left: 20px;
     margin-top: 0;
