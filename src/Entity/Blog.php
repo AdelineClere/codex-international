@@ -1,7 +1,10 @@
 <?php
+
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BlogRepository")
  */
