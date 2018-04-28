@@ -1,0 +1,55 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block body %}
+     <div class="card mb-3">
+        <div class="card-header">
+          <h4><i class="fa fa-table"></i> Ajouter, modifier, ou supprimer un article de la base de données</h4></div>
+            <a class="btn btn-primary" href="{{path('add_esperso')}}"><i class="fa fa-plus"></i> Ajouter un article</a>
+
+          
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Titre</th>
+                  <th>Article</th>
+                  <th>Langue</th>
+                  <th>Title</th>
+                  <th>Article</th>
+                  <th>Language</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Titre</th>
+                  <th>Article</th>
+                  <th>Langue</th>
+                  <th>Title</th>
+                  <th>Article</th>
+                  <th>Language</th>
+                  <th>Actions</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                  {%for esperso in espersos %}
+                <tr>
+                  <td>{{ blog.translate('fr').titre }}</td>
+                  <td>{{ blog.translate('fr').article }}</td>
+                  <td>{{ blog.translate('fr').locale }}</td>
+                  <td>{{ blog.translate('en').titre }}</td>
+                  <td>{{ blog.translate('en').article }}</td>
+                  <td>{{ blog.translate('en').locale }}</td>
+                  
+                  <td><a class="btn btn-danger" href="{{ path('delete_esperso', {'id' : esperso.id}) }}"><i class="fa fa-trash"></i></a>
+                   <a class="btn btn-success" href="{{ path('edit_esperso', {'id' : esperso.id}) }}"><i class="fa fa-edit"></i></a></td>
+                </tr>
+                   {%endfor%}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+    
+{% endblock %}

@@ -28,13 +28,10 @@ class EspersoRepository extends ServiceEntityRepository
     
     public function findMany() 
     {
-        return $this->createEspersoQBQB()->getQuery()->getResult();
+        return $this->createEspersoQB()->getQuery()->getResult();
     }
     
     
 }
 
-
-
-    
   

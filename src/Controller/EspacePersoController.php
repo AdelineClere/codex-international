@@ -4,12 +4,14 @@ namespace App\Controller;
 
 use App\Entity\Esperso;
 use App\Form\EspersoType;
+use App\Repository\UserRepository;
 use App\Repository\EspersoRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class EspacePersoController extends Controller
 {
@@ -25,6 +27,7 @@ class EspacePersoController extends Controller
         ]);
     }
     
+    
     // RAJOUTÉ POUR CRÉER ADMIN ESPACE PERSO
     
     /**
@@ -33,7 +36,7 @@ class EspacePersoController extends Controller
     public function showEspersoAdmin(EspersoRepository $espersoRepo)
     {
         $espersoList = $espersoRepo ->findMany();
-        return $this->render('admin/backoffice_espace_perso.html.twig', ['espersos' => $espersoList]);
+        return $this->render('admin/backoffice_esperso.html.twig', ['espersos' => $espersoList]);
     }
     
     /**
@@ -73,7 +76,7 @@ class EspacePersoController extends Controller
             return $this->redirectToRoute('esperso_dashboard');
         }
         
-        return $this->render('admin/edit_espace_perso.html.twig', [
+        return $this->render('admin/edit_esperso.html.twig', [
            'form' => $formEsperso->createView() 
         ]);
     }

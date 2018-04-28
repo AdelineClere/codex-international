@@ -6,7 +6,7 @@
             {{form_start(form)}}
             {{form_widget(form)}}
             {{form_end(form)}}
-            <a class="btn btn-default" href="{{path('blog_dashboard')}}">Revenir au dashboard</a>
+            <a class="btn btn-default" href="{{path('esperso_dashboard')}}">Revenir au dashboard</a>
         </div>
     </div>{# empty Twig template #}
 {% endblock %}
@@ -15,7 +15,7 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.3/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
-                .create(document.querySelector('#blog_translations_en_article'))
+                .create(document.querySelector('#esperso_translations_en_article'))
                 .then(editor => {
                     console.log(editor);
                 })
@@ -25,7 +25,7 @@
     </script>
     <script>
         ClassicEditor
-                .create(document.querySelector('#blog_translations_fr_article'))
+                .create(document.querySelector('#esperso_translations_fr_article'))
                 .then(editor => {
                     console.log(editor);
                 })
