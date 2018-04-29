@@ -57,7 +57,7 @@ class BlogController extends Controller
             ->add('Envoyer', SubmitType::class);
         
   
-        $formBlog->handleRequest($request); 
+        $formBlog->handleRequest($request);  // déclenche la gestion du formulaire;
         
         if($formBlog->isSubmitted() && $formBlog->isValid())
         {
@@ -71,3 +71,5 @@ class BlogController extends Controller
         ]);
     }
 }
+
+

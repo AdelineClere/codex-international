@@ -376,7 +376,7 @@ a:focus, a:hover {
 }
 .maison-kaprelian {
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .img-kaprelian {
     margin-bottom: 50px;
@@ -397,6 +397,9 @@ a:focus, a:hover {
 
 .contact-form .block button {
     border-radius: 0;
+}
+.btn a:hover {
+    background: red;
 }
 .form-group-3 form-control {
     border-radius: 0;
@@ -425,8 +428,7 @@ a:focus, a:hover {
     font-size: 20px;
     font-weight: bold;
     background: none;
-    box-shadow: none;
-    
+    box-shadow: none;  
 }
 .annonce-progr-fidel-contact {
     margin-top: 30px;

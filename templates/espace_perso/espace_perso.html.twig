@@ -17,26 +17,48 @@
                 </div>
             </div>
         </div>   
-
+        
         <div class="row">    
             <div class="col-md-8 col-md-offset-2 col-sm-12 maison-kaprelian">
                 <p>
                 <h2>Maison KAPRELIAN, l’épicerie fine de l'entreprise</h2>
                 <h4 class="text-kaprelian"><strong>Maison Kaprélian</strong> vous propose une sélection de produits authentiques de nos régions de France, Après avoir fondé, et animé plus de 20 ans, l’enseigne traiteur "Madame est servie !"</h4>
                 <h3><a href="http://www.maison-kaprelian.fr/" target="_blank">Visitez-le site de la <strong>Maison Kaprelian !</strong></a></h34>
-                <br>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-6 col-sm-12 img-kaprelian">
+            <div class="col-md-4 col-md-offset-2 col-sm-12 img-kaprelian">
                 <img class="kaprelian" src="../../uploads/kaprelian1.jpg" alt="kaprelian1">
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-4 col-sm-12 img-kaprelian">
                 <img class="kaprelian" src="../../uploads/kaprelian2.jpg" alt="kaprelian2">
                 </p>
             </div>           
         </div>
 
     </div>
+                    
+                    
+{#                       
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 telechargt">
+                <br>
+                {% for esperso in esperso %}
+                    <h3>{{ esperso.titre }}</h3>
+                    <a href="{{ asset(esperso.getPdfNom) }}">>>> {{ 'download' | trans }} pdf</a>
+                    <p class="body-home">{{ esperso.article }}</p>
+                {% endfor %}
+            </div>
+        </div>  
+    </div>
+#}
+                
 {% endblock %}
+
+
+
+
+
+

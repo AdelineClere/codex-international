@@ -1,0 +1,58 @@
+ <!-- NAV CATEGORIE + search --> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-9">
+                <form method="get" action="{{path('search')}}">
+                    <div class="input-group input-search">
+                        <input type="text" class="loupe"  name="form" placeholder=" {{ 'search' | trans }}"> 
+                        <div class="input-group-addon"><button type="submit" class="btn btn-loupe"> <i class="fa fa-search"></i></button></input></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="nav2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-5">
+                        <div class="titre-nav2">
+                            <i class="fa fa-arrow-alt-circle-down"></i>
+                            <h2>{{ 'Codex_fabrication' | trans }}</h2>
+                            <h2>{{ 'Codex_fabrication2' | trans }}</h2>
+                        </div>
+                        
+                        <ul class="nav nav-pills col-md-12 nav-categories">
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    {{ 'Category_1' | trans }} <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category0.slug}) }}"> > {{ category0.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category1.slug}) }}"> > {{ category1.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category2.slug}) }}"> > {{ category2.titre }}</a></li>
+                                    <li role="presentation" ><a href="{{ path('category',{slug : category3.slug}) }}"> > {{ category3.titre }}</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category4.slug}) }}"> > {{ category4.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category5.slug}) }}"> > {{ category5.titre }}</a></li>
+                        </ul>  
+                    </div>
+
+                    <div class="col-md-7">
+                        <i class="fa fa-arrow-alt-circle-down"></i>
+                        <h2>{{ 'Codex_fournisseur' | trans }}</h2>
+                        <h2>{{ 'Codex_fournisseur2' | trans }}</h2>
+
+                        <ul class="nav nav-pills col-md-12 nav-categories">
+                            <li role="presentation" ><a href="{{ path('category',{slug : category6.slug}) }}"> > {{ category6.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category7.slug}) }}"> > {{ category7.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category8.slug}) }}"> > {{ category8.titre }}</a></li>
+                            <li role="presentation" ><a href="{{ path('category',{slug : category9.slug}) }}"> > {{ category9.titre }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <!-- end NAV CATEGORIE + search -->  

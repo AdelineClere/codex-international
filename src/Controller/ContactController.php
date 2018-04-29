@@ -34,6 +34,11 @@ class ContactController extends Controller {
                     ->setFrom($contact->email)
                     //->setTo('stephane.seguier@codex-international.com')
                     ->setBody($message)
+                    
+                    ->setFrom($contact->email)
+                    ->setTo($contact->email)
+                    ->setBody($message . "Nous vous contacterons rapidement")
+                    
             /*
              * If you also want to include a plaintext version of the message
               ->addPart(
