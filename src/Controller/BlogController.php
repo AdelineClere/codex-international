@@ -33,8 +33,6 @@ class BlogController extends Controller
 //    }
     
     
-    
-    
 
     
     /**
