@@ -20,7 +20,7 @@ class BlogType extends AbstractType
         $builder
             ->add('image1', FileType::class, array('data_class' => null))
             ->add('image2', FileType::class, array('data_class' => null))
-            ->add('pdf', FileType::class, array('data_class' => null))
+            ->add('pdf_nom', FileType::class, array('data_class' => null))
             ->add('translations',TranslationsType::class, [
                 'required_locales' => ['en'],
                 'fields' => [

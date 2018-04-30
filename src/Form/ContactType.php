@@ -1,9 +1,6 @@
 <?php
-// c est pour le formulaire des produits
-//c est un service. c est lui qui va gerer notre formulaire produits. il gere tout ce qui est en rapport avc notre formulaire
-namespace App\Form;
-//pas de pb que textarea soit declare ci dessous et a la ligne 19.
 
+namespace App\Form;
 
 use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
