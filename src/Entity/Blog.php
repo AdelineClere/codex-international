@@ -70,11 +70,11 @@ class Blog
         return $this;
     }
 
-    function getPdf_nom() {
+    function getPdfNom() {
         return $this->pdf_nom;
     }
 
-    function setPdf_nom($pdf_nom) {
+    function setPdfNom($pdf_nom) {
         $this->pdf_nom = $pdf_nom;
     }
 

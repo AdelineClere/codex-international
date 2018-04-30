@@ -28,8 +28,7 @@ class EspersoFixtures extends Fixture
         $esperso1->mergeNewTranslations();
         
 
-        
-        
+     
         $manager->flush();
         
     }
