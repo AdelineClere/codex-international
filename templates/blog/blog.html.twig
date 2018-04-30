@@ -7,6 +7,24 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-12">
                     <div class="post post-single">
+                        
+                        
+                       {# {% for blog in blogs %}
+                            <h3>{{ blog.titre }}</h3>
+                            <p>{{ blog.article }}</p>
+                        {% endfor %}#}
+
+                        
+                        {% for blog in blogs %}
+                        
+                            <h2 class="post-title">{{ blog.translate.titre }}</h2>
+                            <p>{{ blog.translate.article | raw }}</p>
+                   
+                        {% endfor %}
+                    
+                    
+                    
+                        
                         <h2 class="post-title">How To Wear Bright Shoes</h2>
                         <div class="post-meta">
                             <ul>
@@ -55,3 +73,4 @@
 
 
 {% endblock %}
+

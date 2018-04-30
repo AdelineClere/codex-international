@@ -15,17 +15,40 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EspacePersoController extends Controller
 {
+    /* affiche la pg en front */
     /**
      * @Route("/espace/perso", name="espace_perso") 
      */
-    public function index(UserRepository $UserRepo, Request $request)
+    public function index(UserRepository $UserRepo, EspersoRepository $EspersoRepo, Request $request)
     {
+        $espersos = $EspersoRepo->findMany();
+        
         $this->denyAccessUnlessGranted('ROLE_USER');
         $fidelite = $UserRepo->cumul_commande($this->getUser());
         return $this->render('espace_perso/espace_perso.html.twig', [
             'fidelite' => $fidelite,
+            
+            'espersos' => $espersos,
         ]);
+        
+        
     }
+    
+  
+    
+//        public function index(UserRepository $UserRepo, Request $request)
+//    {
+//        $this->denyAccessUnlessGranted('ROLE_USER');
+//        $fidelite = $UserRepo->cumul_commande($this->getUser());
+//        return $this->render('espace_perso/espace_perso.html.twig', [
+//            'fidelite' => $fidelite,
+//        ]);
+//    }
+//    
+    
+    
+    
+    
     
     
     // RAJOUTÉ POUR CRÉER ADMIN ESPACE PERSO

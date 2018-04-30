@@ -12,7 +12,7 @@
                 {% endif %}
                 <div class="alerte-kdo">
                     {% if fidelite %}
-                        <h3>Votre cumul de commandes a atteint 5000 euros, vous recevrez bientôt un coffret de la sélection "Maison Kaprelian" !</h3>
+                        <h3>Votre cumul de commandes a atteint <strong>5000 euros</strong>, vous recevrez bientôt un coffret de la sélection "Maison Kaprelian" !</h3>
                     {% endif %}
                 </div>
             </div>
@@ -37,6 +37,27 @@
             </div>           
         </div>
 
+                
+                
+                
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <div class="post post-single">
+
+
+                    {% for esperso in espersos %}
+
+                        <h2 class="post-title">{{ esperso.translate.titre }}</h2>
+                        <p>{{ esperso.translate.article | raw }}</p>
+
+                    {% endfor %}  
+                    
+
+                </div>
+            </div>
+        </div>     
+                    
+                
     </div>
                     
                     

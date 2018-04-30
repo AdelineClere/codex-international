@@ -4,17 +4,23 @@ namespace App\Form;
 
 use App\Entity\Blog;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Test\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Uerka\TranslationFormBundle\Form\Type\TranslationsType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+
+
 
 class BlogType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('image1', FileType::class, array('data_class' => null))
+            ->add('image2', FileType::class, array('data_class' => null))
+            ->add('pdf', FileType::class, array('data_class' => null))
             ->add('translations',TranslationsType::class, [
                 'required_locales' => ['en'],
                 'fields' => [
@@ -42,3 +48,5 @@ class BlogType extends AbstractType
         ]);
     }
 }
+
+  

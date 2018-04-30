@@ -20,12 +20,17 @@ class Esperso
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=150, nullable=true)
+     * @ORM\Column(type="string", length=60, nullable=true)
      */
-    private $image;
+    private $image1;
     
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    private $image2;
+    
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
      */
     private $pdf_nom;  
     
@@ -35,15 +40,25 @@ class Esperso
         return $this->id;
     }
 
-    public function getImage()
+    public function getImage1()
     {
-        return $this->image;
+        return $this->image1;
     }
-
-    public function setImage($image): self
+    
+    public function setImage1($image1): self
     {
-        $this->image = $image;
-
+        $this->image1 = $image1;
+        return $this;
+    }
+    
+    public function getImage2()
+    {
+        return $this->image2;
+    }
+    
+    public function setImage2($image2): self
+    {
+        $this->image2 = $image2;
         return $this;
     }
        

@@ -12,15 +12,31 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends Controller
 {
+    /* affiche la pg en front */
     /**
      * @Route("/blog", name="blog")
      */
-    public function index()
+        public function index(BlogRepository $BlogRepo)
     {
+        $blogs = $BlogRepo->findMany();
         return $this->render('blog/blog.html.twig', [
-            'controller_name' => 'BlogController',
+            'blogs' => $blogs,
         ]);
     }
+    
+    
+//    public function index()
+//    {
+//        return $this->render('blog/blog.html.twig', [
+//            'controller_name' => 'BlogController',
+//        ]);
+//    }
+    
+    
+    
+    
+
+    
     /**
      * @Route("admin/dashboard_blog", name="blog_dashboard")
      */
