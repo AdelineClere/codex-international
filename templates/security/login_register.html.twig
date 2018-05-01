@@ -19,7 +19,7 @@
                             <h3 class="annonce"><strong>Enregistrez-vous</strong> pour participer à notre programme<br> de fidélisation original et convivial : <span class="apero-labo">l'apéro labo</span></h3>
                             <br>
                             <div class=" col-md-6">
-                                <div class="form-group">
+                                <div class="form-group register-prenom">
                                     {{ form_widget(form.prenom, { attr : { placeholder : 'prenom' } }) }}
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class=" col-md-8">
-                                <div class="form-group">
+                                <div class="form-group register-societe">
                                     {{ form_widget(form.societe, { attr : { placeholder : 'societe' } }) }}
                                 </div>
                             </div>
@@ -38,13 +38,13 @@
                                     {{ form_widget(form.telephone, { attr : { placeholder : 'Tel' } }) }}
                                 </div>
                             </div>
-                            <div class=" col-md-12">
+                            <div class=" col-md-12 register-email">
                                 <div class="form-group">
                                     {{ form_widget(form.email, { attr : { placeholder : 'Email' } }) }}
                                 </div>
                             </div>
                             <div class=" col-md-6">
-                                <div class="form-group">
+                                <div class="form-group register-mdp">
                                     {{ form_widget(form.plainPassword.first, { attr : { placeholder : 'mdp' } }) }}
                                 </div>
                             </div>

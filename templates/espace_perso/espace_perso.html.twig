@@ -44,26 +44,30 @@
             <div class="col-md-8 col-md-offset-2 col-sm-12">
                 <div class="post post-single">
 
-
                     {% for esperso in espersos %}
 
                         <h2 class="post-title">{{ esperso.translate.titre }}</h2>
                         <p>{{ esperso.translate.article | raw }}</p>
                         
-                        <a class="esperso-pdf" href="{{ asset(esperso.pdfNom)}}" target="_blank">
-                            {{ esperso.pdfNom }}
-                        </a>    
-                        <img class="esperso-img" src="{{ asset(esperso.image1)}}" target="_blank">   
-                        <img class="esperso-img" src="{{ asset(esperso.image2)}}" target="_blank"> 
+                        <a class="esperso-pdf" href="{{ asset(esperso.pdfNom)}}" target="_blank">{{ esperso.pdfNom }}</a>   
+                        
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-2 col-sm-12 div-img-esperso">
+                                <img class="esperso-img" src="{{ asset(esperso.image1)}}" target="_blank"> 
+                            </div>
+                            <div class="col-md-5 col-sm-12 div-img-esperso">
+                                <img class="esperso-img" src="{{ asset(esperso.image2)}}" target="_blank"> 
+                            </div>
+                        </div>
 
                     {% endfor %}  
                     
-
-                </div>
-            </div>
-        </div>     
+                </div>     
+            </div>                  
+        </div>
+        
+        <hr>  
                     
-                
     </div>
                     
                     

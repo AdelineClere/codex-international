@@ -20,16 +20,21 @@
                             <h2 class="post-title">{{ blog.translate.titre }}</h2>
                             <p>{{ blog.translate.article | raw }}</p>
                             
-                            <a class="blog-pdf" href="{{ asset(blog.pdfNom)}}" target="_blank">{{ blog.pdfNom }}
-                            </a>    
-                            <img class="blog-img" src="{{ asset(blog.image1)}}" target="_blank">   
-                            <img class="blog-img" src="{{ asset(blog.image2)}}" target="_blank"> 
+                            <a class="blog-pdf" href="{{ asset(blog.pdfNom)}}" target="_blank">{{ blog.pdfNom }}</a> 
+                            
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-2 col-sm-12 div-img-esperso">
+                                    <img class="blog-img" src="{{ asset(blog.image1)}}" target="_blank">   
+                                </div>
+                                <div class="col-md-5 col-sm-12 div-img-esperso">
+                                    <img class="blog-img" src="{{ asset(blog.image2)}}" target="_blank"> 
+                                </div>
+                            </div>
                    
                         {% endfor %}
                     
                   
-                    
-                    
+                           
                     
                         
                         <h2 class="post-title">How To Wear Bright Shoes</h2>

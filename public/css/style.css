@@ -109,7 +109,6 @@ a:focus, a:hover {
     padding-right: 0;
 }
 
-
 .why-us {
     text-align: justify;
 }
@@ -132,6 +131,7 @@ a:focus, a:hover {
 .nav-categories a {
     background: #F5F5F5;
     color: #bd7718;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
 .nav-categories .nav>li>a:focus, .nav>li>a:hover {
     color: #bd7718;
@@ -359,6 +359,15 @@ a:focus, a:hover {
     font-weight: bold;
     box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
+.col-md-4, .col-md-6, .col-md-8 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.register-prenom, .register-societe, .register-mdp {
+    margin-right: 15px;
+}
+
+
 
 /***************** espace/perso **************/
 
@@ -391,14 +400,23 @@ a:focus, a:hover {
     margin-bottom: 50px;
 }
 .kaprelian {
-    width: 100%;
+    width: 95%;
 }
 .maison-kaprelian h3 a:hover {
     font-size: 20px;
     color: #72655c;
 }
+.div-img-esperso {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.esperso-img {
+    width: 100%;
+}
 
-/***************** contact **************/
+
+/**************** contact **************/
 
 .btn-envoyer {
     margin-top: 20px;
