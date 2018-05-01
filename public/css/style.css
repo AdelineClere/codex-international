@@ -416,6 +416,27 @@ a:focus, a:hover {
 }
 
 
+
+/**************** blog **************/
+
+blockquote {
+    border-color: #bd7718;
+    padding: 20px 40px;
+    text-align: left;
+}
+blockquote p {
+    font-size: 18px;
+    color: #bd7718;
+} 
+.div-img-blog {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 0;
+}
+.blog-img {
+    width: 100%;
+}
+
 /**************** contact **************/
 
 .btn-envoyer {
