@@ -19,8 +19,15 @@
                         
                             <h2 class="post-title">{{ blog.translate.titre }}</h2>
                             <p>{{ blog.translate.article | raw }}</p>
+                            
+                            <a class="blog-pdf" href="{{ asset(blog.pdfNom)}}" target="_blank">{{ blog.pdfNom }}
+                            </a>    
+                            <img class="blog-img" src="{{ asset(blog.image1)}}" target="_blank">   
+                            <img class="blog-img" src="{{ asset(blog.image2)}}" target="_blank"> 
                    
                         {% endfor %}
+                    
+                  
                     
                     
                     

@@ -12,9 +12,9 @@ class BlogFixtures extends Fixture
     {
         $article = new Blog();
         
-        $article->setImage1("blog1.jpg")
-                ->setImage2("blog2.jpg") 
-                ->setpdfNom("blog.pdf");
+        $article->setImage1("uploads/img_blog/blog1.jpg")
+                ->setImage2("uploads/img_blog/blog2.jpg") 
+                ->setpdfNom("uploads/pdf_blog/blog.pdf");
                 
         $article->translate("fr")
                 ->setTitre('bonjour')

@@ -50,11 +50,11 @@
                         <h2 class="post-title">{{ esperso.translate.titre }}</h2>
                         <p>{{ esperso.translate.article | raw }}</p>
                         
-                        <a class="esperso-pdf" href="{{ asset(esperso.pdf)}}" target="_blank">
-                            {{ esperso.pdf_nom }}
+                        <a class="esperso-pdf" href="{{ asset(esperso.pdfNom)}}" target="_blank">
+                            {{ esperso.pdfNom }}
                         </a>    
-                       <img class="esperso-img" src="{{ asset(esperso.image1)}}" target="_blank">   
-                       <img class="esperso-img" src="{{ asset(esperso.image2)}}" target="_blank"> 
+                        <img class="esperso-img" src="{{ asset(esperso.image1)}}" target="_blank">   
+                        <img class="esperso-img" src="{{ asset(esperso.image2)}}" target="_blank"> 
 
                     {% endfor %}  
                     

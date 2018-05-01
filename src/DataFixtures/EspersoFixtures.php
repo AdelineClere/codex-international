@@ -12,9 +12,9 @@ class EspersoFixtures extends Fixture
     {
         $esperso1 = new Esperso();
         $esperso1
-                ->setImage1("uploads/esperso1.jpg")
-                ->setImage2("uploads/esperso2.jpg") 
-                ->setpdfNom("uploads/Att_fin_formation.pdf");
+                ->setImage1("uploads/img_esperso/esperso1.jpg")
+                ->setImage2("uploads/img_esperso/esperso2.jpg") 
+                ->setpdfNom("uploads/pdf_esperso.esperso.pdf");
         $esperso1
                 ->translate("fr")
                 ->setTitre("publier article 1")

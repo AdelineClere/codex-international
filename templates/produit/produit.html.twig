@@ -54,9 +54,10 @@
                     {% for produit in produits %}
                     <ul class="liste-produits">
                         <li>                          
+{#                            <i class="fas fa-angle-double-right"></i>#}
                             <a class="produits-pdf" href="{{ asset(produit.pdf)}}" target="_blank">
                                 {{ produit.nom }}
-                            </a>                           
+                            </a>                         
                         </li>
                     </ul>
                     {% endfor %}
