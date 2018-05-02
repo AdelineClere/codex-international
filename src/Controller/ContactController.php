@@ -32,20 +32,8 @@ class ContactController extends Controller {
             $theFinallyMessage = (new \Swift_Message($contact->sujet))
 
                     ->setFrom($contact->email)
-                    ->setTo($contact->email /*. ';stephane.seguier@codex-international.com'*/)
-                    ->setBody($message . "Nous vous contactons rapidement");
-                    
-            /*
-             * If you also want to include a plaintext version of the message
-              ->addPart(
-              $this->renderView(
-              'emails/registration.txt.twig',
-              array('name' => $name)
-              ),
-              'text/plain'
-              )
-             */
-            ;
+                    ->setTo($contact->email . 'stephane.seguier@codex-international.com')
+                    ->setBody($message . "Nous vous contactons rapidement");            
 
             if($mailer->send($theFinallyMessage)){
                 return $this->render('contact/registration.html.twig',[
@@ -65,3 +53,19 @@ class ContactController extends Controller {
     }
 }
 
+
+
+//            // pour le client
+//            $emailPourUser =
+//                (new \Swift_Message('Votre demande de contact à monsite.com'))
+//                ->setFrom('webmaster@monsite.com')
+//                ->setTo($contact->email)
+//                ->setBody('Merci pour votre demande. Nous vous contactons rapidement');
+//            $mailer->send($emailPourUser);
+// 
+//            // pour l'admin du site
+//            $emailPourAdmin = (new \Swift_Message($contact->sujet))
+//                ->setFrom($contact->email)
+//                ->setTo('admin@email.com')
+//                ->setBody('Un message à été postée sur monsite.com : '.$message.' Par : '.$contact->email);
+//            $mailer->send($emailPourAdmin);
