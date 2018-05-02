@@ -16,7 +16,7 @@
                     <form method="post" action="{{ path('register') }}" id="enregistr">
                         <div class="block">
                             {{ form_start(form) }}
-                            <h3 class="annonce"><strong>Enregistrez-vous</strong> pour participer à notre programme<br> de fidélisation original et convivial : <span class="apero-labo">l'apéro labo</span></h3>
+                            <h3 class="annonce"><strong>Enregistrez-vous</strong> pour vous connectez ensuite et participer à notre programme de fidélisation original et convivial : <span class="apero-labo">l'apéro labo !</span></h3>
                             <br>
                             <div class=" col-md-6">
                                 <div class="form-group register-prenom">
@@ -65,9 +65,7 @@
             </div>
 
             <div class="col-md-3 col-md-offset-1 connexion">
-                {% if error is defined and error %}
-                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                {% endif %}
+                
                 <div class="row">
                     <div class="col-md-12">
                         <form id="conmexion" action="{{ path('loginregister') }}" method="post">
@@ -84,6 +82,9 @@
                         </form>
                     </div>
                 </div>
+                        {% if error is defined and error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
             </div>
         </div>
     </section>

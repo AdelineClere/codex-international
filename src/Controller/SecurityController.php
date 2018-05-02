@@ -56,7 +56,7 @@ class SecurityController extends Controller {
      */
     public function loginRegister(AuthenticationUtils $authenticationUtils, Request $request, UserPasswordEncoderInterface $passwordEncoder) {
         
-            // get the login error if there is one
+        // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
         // last username entered by the user

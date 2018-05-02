@@ -28,7 +28,7 @@ class ContactType extends AbstractType
             ->add('telephone', TelType::class)
             ->add('email', EmailType::class)
             ->add('sujet',null,['required'=>false])
-            ->add('message', TextareaType::class)                           
+            ->add('message', TextareaType::class,['required'=>false])                           
             ->add('horaires', ChoiceType::class, array(
                 'choices' => array(
                 'Choose schedule / Choisissez un horaire' => ('-'),

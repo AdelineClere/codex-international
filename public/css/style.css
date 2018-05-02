@@ -11,7 +11,6 @@ a:focus, a:hover {
     color: #72655c;
 }
 
-
 /***************** header navigation **************/
 
 .navigation {
@@ -140,7 +139,9 @@ a:focus, a:hover {
     background-color: transparent;
     border: none;
 }
-
+.dropdown-menu {
+    border: none;
+}
 .dropdown-menu>li>a {
     color: #bd7718;
     text-transform: uppercase;
@@ -159,6 +160,66 @@ a:focus, a:hover {
     border: none;
 }
 
+
+/* ------------- Fading-Carousel -------------- */
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.carousel-caption h1 {
+    font-weight: 200;
+    letter-spacing: 6px;
+    align-items: center;
+}
+.fadeIn-home {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fadeIn-home h1 {
+    font-weight: 400;
+    font-size: 4vw;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+/* mobile */
+@media (max-width: 580px){ 
+    .carousel-caption h1 {
+        font-weight: 200;
+        letter-spacing: 6px;
+        font-size: 18px;
+        line-height: auto;
+    }
+}
+    
 /***************** HOME / Why us **************/
 
 .container-fluid {
@@ -270,65 +331,6 @@ a:focus, a:hover {
 }
 
 
-/* ------------- Fading-Carousel -------------- */
-
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
-}
-.carousel-caption h1 {
-    font-weight: 200;
-    letter-spacing: 6px;
-    align-items: center;
-}
-.fadeIn-home {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    margin: auto 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.fadeIn-home h1 {
-    font-weight: 400;
-    font-size: 4vw;
-    letter-spacing: 3px;
-    text-transform: capitalize;
-    color: #fff;
-}
-
-/* mobile */
-@media (max-width: 580px){ 
-    .carousel-caption h1 {
-        font-weight: 200;
-        letter-spacing: 6px;
-        font-size: 18px;
-        line-height: auto;
-    }
-}
-    
 /* ------------- login_register -------------- */
 
 .overly:before, .page-title:before, .slider:before {
@@ -366,8 +368,6 @@ a:focus, a:hover {
 .register-prenom, .register-societe, .register-mdp {
     margin-right: 15px;
 }
-
-
 
 /***************** espace/perso **************/
 
@@ -414,9 +414,13 @@ a:focus, a:hover {
 .esperso-img {
     width: 100%;
 }
-
-
-
+.annonce {
+    margin-left: 0;
+}
+.alert  {
+    margin-top: 15px;
+    text-align: center;
+}
 /**************** blog **************/
 
 blockquote {
@@ -462,6 +466,10 @@ blockquote p {
 .form-control:focus {
     border-color: #ccc
 }
+textarea.form-control {
+    height: 150px;
+}
+
 .pdf-stocks {
     padding-left: 20px;
     margin-top: 0;
@@ -505,6 +513,7 @@ blockquote p {
 .message-envoye {
     margin-top: 50px;
     margin-bottom: 40px;
+    text-transform: capitalize;
 }
 .message-envoye a:hover {
     font-size: 28px;
@@ -541,7 +550,4 @@ h3 .apero-labo {
 .footer-codex .logo {
    width: 400px; 
 }
-
-
-/***************** DASHBOARD **************/
 

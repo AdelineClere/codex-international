@@ -15,13 +15,13 @@ class Contact
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=50)
+     * @Assert\Length(min=2, max=80)
      */
     public $nom;
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=50)
+     * @Assert\Length(min=2, max=80)
      */
     public $prenom;
 
@@ -44,12 +44,12 @@ class Contact
     
      /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=5, max=150)
+     * @Assert\Length(min=0, max=150)
      */
     public $sujet;
 
     /**
-     * @Assert\NotBlank()
+     * @Assert\Length(min=0, max=500, maxMessage="Votre texte est trop long")
      */
     public $message;
       

@@ -16,7 +16,7 @@ class AdminController extends Controller
      * @Route("/admin/dashboard", name="admin_dashboard")
      */
     public function index(UserRepository $UserRepo)
-// $UserRepo est passer automatiquement en paramatre grace a symfony c'est ce qui s'appelle la dependance, on a donc pas a l'instancier nous-même.
+// $UserRepo est passé automatiquement en param grace a symfony c'est ce qui s'appelle la dependance, on a dc pas a l'instancier nous-même.
     {
         // $userRepo effectue ici un SELECT * FROM user ...
         $userList = $UserRepo ->findAll();
