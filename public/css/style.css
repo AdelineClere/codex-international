@@ -450,7 +450,7 @@ blockquote p {
 .contact-form .block button {
     border-radius: 0;
 }
-.btn a:hover {
+#contact_Envoyer .btn-secondary btn a:hover {
     background: red;
 }
 .form-group-3 form-control {
