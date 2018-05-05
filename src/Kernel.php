@@ -2,6 +2,7 @@
 
 namespace App;
 
+use EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
@@ -33,6 +34,12 @@ class Kernel extends BaseKernel
                 yield new $class();
             }
         }
+        
+        // recherche ck editor, easyAdmin...
+        $bundles = array(
+            // ...
+            new EasyAdminBundle(),
+        );
 
     }
 

@@ -32,6 +32,10 @@ class BlogType extends AbstractType
                     ],
                     'article' => [
                         'widget_class' => TextareaType::class,
+//                        
+                        //Rercherche Ckeditor Ve3mai
+//                        'widget_class' => CkeditorType::class,
+                        
                         'options' => [
                             'label' => 'form_product.label.description'
                         ]
@@ -49,4 +53,20 @@ class BlogType extends AbstractType
     }
 }
 
-  
+
+//Rercherche Ckeditor Ve3mai
+
+//class CkeditorType extends AbstractType
+//{
+//    public function configureOptions(OptionsResolver $resolver)
+//    {
+//        $resolver->setDefaults(array(
+//          'attr' => array('class' => 'ckeditor') // On ajoute la classe CSS
+//        ));
+//    }
+//
+//    public function getParent() // On utilise l'héritage de formulaire
+//    {
+//        return TextareaType::class;
+//    }
+//}

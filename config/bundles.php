@@ -17,4 +17,5 @@ return [
     Uerka\TranslationFormBundle\UerkaTranslationFormBundle::class => ['all' => true],
     Hillrange\CKEditor\HillrangeCKEditorBundle::class => ['all' => true],
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
+    EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle::class => ['all' => true],
 ];
