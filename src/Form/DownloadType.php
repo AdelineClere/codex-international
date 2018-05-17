@@ -3,9 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Download;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -27,9 +27,16 @@ class DownloadType extends AbstractType
                         ],
                     ],
                     'description' => [
-                        'widget_class' => TextareaType::class,
+                        'widget_class' => CKEditorType::class,
                         'options' => [
-                            'label' => 'form_product.label.description'
+                            'label' => 'form_product.label.description',
+                            'config' => array(
+                                'filebrowserBrowseRoute' => 'elfinder',
+                                'filebrowserBrowseRouteParameters' => array(
+                                    'instance' => 'default',
+                                    'homeFolder' => ''
+                                )
+                            ),
                         ]
                     ],
                 ],

@@ -3,9 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Esperso;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -17,9 +17,9 @@ class EspersoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('image1', FileType::class, array('data_class' => null))
-            ->add('image2', FileType::class, array('data_class' => null))
-            ->add('pdf_nom', FileType::class, array('data_class' => null))
+            ->add('image1', FileType::class, array('data_class' => null, 'required'=>false))
+            ->add('image2', FileType::class, array('data_class' => null, 'required'=>false))
+            ->add('pdf_nom', FileType::class, array('data_class' => null, 'required'=>false))
             ->add('translations',TranslationsType::class, [
                 'required_locales' => ['en'],
                 'fields' => [
@@ -30,9 +30,16 @@ class EspersoType extends AbstractType
                         ],
                     ],
                     'article' => [
-                        'widget_class' => TextareaType::class,
+                        'widget_class' => CKEditorType::class,
                         'options' => [
-                            'label' => 'form_product.label.description'
+                            'label' => 'form_product.label.description',
+                            'config' => array(
+                                'filebrowserBrowseRoute' => 'elfinder',
+                                'filebrowserBrowseRouteParameters' => array(
+                                    'instance' => 'default',
+                                    'homeFolder' => ''
+                                )
+                            ),
                         ]
                     ],
                 ],

@@ -47,10 +47,10 @@
                 <tr>
 
                   <td>{{ category.translate('fr').titre }}</td>
-                  <td>{{ category.translate('fr').description }}</td>
+                  <td>{{ category.translate('fr').description | striptags }}</td>
                   <td>{{ category.translate('fr').locale }}</td>
                   <td>{{ category.translate('en').titre }}</td>
-                  <td>{{ category.translate('en').description }}</td>
+                  <td>{{ category.translate('en').description | striptags }}</td>
                   <td>{{ category.translate('en').locale }}</td>
 
                   <td><a class="btn btn-danger" href="{{ path('delete_category', {'id' : category.id}) }}"><i class="fa fa-trash"></i></a>
