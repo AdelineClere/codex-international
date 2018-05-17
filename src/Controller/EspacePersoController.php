@@ -115,6 +115,7 @@ class EspacePersoController extends Controller
             $user = $userRepo->findOneBy(array('email' => $email));
             $user->setPassword($encoder->encodePassword($user, $newPass));
             $manager->persist($user);
+            $manager->flush();
             $locale = $request->getLocale();
             $emailContent = $this->renderView('espace_perso/changepassword_email.' . substr($locale, 0, 2) . '.html.twig', [
                 'user' => $user,
