@@ -1,0 +1,47 @@
+{% block translations_row %}
+    {{ form_errors(form) }}
+    {% spaceless %}
+        <div class="card translations-container">
+            {% if form.vars.label %}
+                <div class="card-header">{{ form.vars.label|trans }}</div>
+            {% endif %}
+            <div class="card-body">
+                {{ form_widget(form) }}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock %}
+ 
+{% block translations_widget %}
+    {% spaceless %}
+        <div id="{{form.vars.id}}">
+            <nav>
+                <div class="nav nav-tabs" role="tablist">
+                    {% for locale, fields in form.children %}
+                        <a class="nav-item nav-link {%if loop.index == 1 %}active show{%endif%}" id="navs-{{form.vars.id}}-{{locale}}" data-toggle="tab" href="#{{form.vars.id}}-{{locale}}" role="tab" aria-controls="{{form.vars.id}}-{{locale}}" aria-selected="{{ loop.index == 1 ? 'true' : 'false'  }}">
+                            {{ locale }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </nav>
+            <div class="tab-content translations-tabs">
+                {% for locale, fields in form.children %}
+                    <div class="tab-pane fade {%if loop.index == 1 %}active show{% endif %}" id="{{form.vars.id}}-{{locale}}" role="tabpanel" aria-labelledby="nav-{{form.vars.id}}-{{locale}}">
+                        {% for field in fields %}
+                            {% if 'textarea' in field.vars.block_prefixes %}
+                                <div class="document-editor">
+                                    <div class="document-editor__toolbar" id="toolbar-{{form.vars.id}}-{{locale}}"></div>
+                                    <div class="document-editor__editable-container">
+                                        {{ form_row(field) }}
+                                    </div>
+                                </div>
+                                {% else %}
+                                    {{ form_row(field) }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock %}

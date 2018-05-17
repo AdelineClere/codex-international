@@ -10,18 +10,17 @@
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              
               <thead>
                 <tr>
                   <th>Nom</th>
                   <th>Langue</th>
                   <th>Name</th>
                   <th>Language</th>
-                  <th>Actions</th>
-                  
-                  
-                  
+                  <th>Actions</th>                 
                 </tr>
               </thead>
+
               <tfoot>
                 <tr>
                   <th>Nom</th>
@@ -29,11 +28,9 @@
                   <th>Name</th>
                   <th>Language</th>
                   <th>Actions</th>
-                 
-                  
                 </tr>
               </tfoot>
-              
+
               <tbody>
                   {%for produit in produits %}
                 <tr>
@@ -41,17 +38,15 @@
                   <td>{{ produit.translate('fr').locale }}</td>
                   <td>{{ produit.translate('en').nom }}</td>
                   <td>{{ produit.translate('en').locale }}</td>
-                 
+
                   <td><a class="btn btn-danger" href="{{ path('delete_produit', {'id' : produit.id}) }}"><i class="fa fa-trash"></i></a>
                    <a class="btn btn-success" href="{{ path('edit_produit', {'id' : produit.id}) }}"><i class="fa fa-edit"></i></a></td>
                 </tr>
                    {%endfor%}
-              
-              
-            </table>
+                   
+             </table>
           </div>
         </div>
                    
-
     
 {% endblock %}
