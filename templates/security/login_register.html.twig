@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-md-3 col-md-offset-1 connexion">
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <form id="conmexion" action="{{ path('loginregister') }}" method="post">
@@ -78,11 +78,14 @@
                                     <input class="form-control" type="password" id="password" name="_password" placeholder="{{ 'mdp' | trans }}" />
                                 </div>
                             </div>
-                            <button class="btn btn-default col-xs-12" type="submit">{{ 'connexion' | trans }}</button>
+                            <button class="btn btn-default col-xs-12" type="submit">{{ 'connexion' | trans }}</button><br/>
+                            <a href="{{ path('forgottenpass') }}" title="{{ 'form.login.forgottenpassword' | trans }}">
+                                {{ 'form.login.forgottenpassword' | trans }}
+                            </a>
                         </form>
                     </div>
                 </div>
-                        {% if error is defined and error %}
+                {% if error is defined and error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
             </div>

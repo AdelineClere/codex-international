@@ -1,42 +1,51 @@
 bonjour: Bonjour
 connexion: Connectez-vous
 deconnexion: Deconnexion
-mdp: Mot de passe
-mdpSaisi: Saisissez un mot de passe
-mdpReSaisi: Re-saisissez votre mot de passe
+mdp: 'Mot de passe'
+mdpSaisi: 'Saisissez un mot de passe'
+mdpReSaisi: 'Re-saisissez votre mot de passe'
 enregistrer: Inscrivez-vous
 envoi: Envoyer
-envoyer: Envoyer le message
-rappel: Faites-vous rappelez
+envoyer: 'Envoyer le message'
+rappel: 'Faites-vous rappelez'
 home: 'Pourquoi codex ?'
 downloads: Téléchargements
-download: Télécharger le
+download: 'Télécharger le'
 espace: 'Votre espace'
 blog: Blog
 contact: Contactez-nous
-transmis: Votre message a été envoyé, nous vous contactons rapidement !
+transmis: 'Votre message a été envoyé, nous vous contactons rapidement !'
 search: Rechercher
-search-null: Aucune réponse à votre recherche
+search-null: 'Aucune réponse à votre recherche'
 prenom: Prénom
 nom: Nom
 societe: Société
-devis: Obtenir un devis
-stocks: Etat des stocks
-contactStock: Télécharger l'état des stocks
-Codex_fabrication: Codex International
-Codex_fabrication2: Fabrication & Services
-Codex_fournisseur: Codex International
+devis: 'Obtenir un devis'
+stocks: 'Etat des stocks'
+contactStock: 'Télécharger l''état des stocks'
+Codex_fabrication: 'Codex International'
+Codex_fabrication2: 'Fabrication & Services'
+Codex_fournisseur: 'Codex International'
 Codex_fournisseur2: Fournisseur
-Category_1: Matériaux couches minces
-Category_2: Cibles de pulvérisation
-Category_3: Matériau d'évaporation
-Category_4: Fils,Feuilles, Plaques
-Category_5: Métaux précieux
+Category_1: 'Matériaux couches minces'
+Category_2: 'Cibles de pulvérisation'
+Category_3: 'Matériau d''évaporation'
+Category_4: 'Fils,Feuilles, Plaques'
+Category_5: 'Métaux précieux'
 Category_6: Substrats
 Category_7: Services
-Category_8: Pompe à vide
-Category_9: Couches minces
+Category_8: 'Pompe à vide'
+Category_9: 'Couches minces'
 Category_10: Optique
 Category_11: Microscopie
 form_product.label.title: Titre
 form_product.label.description: Description
+form_forgotten_password.email: 'Votre adresse email'
+form_forgotten_password.submit: 'Envoyez-moi un nouveau mot de passe'
+form.login.forgottenpassword: 'Mot de passe oublié'
+email_not_found: 'L''email "{{ value }}" n''existe pas dans notre base de données.'
+forgotten_password.email.subject: 'Votre nouveau mot de passe'
+new_password_sent: 'Un nouveau mot de passe vient de vous être envoyé par email'
+new_password_not_sent: 'Votre nouveau mot de passe n''a pas pu être envoyé. Contactez un administrateur pour régler votre problème.'
+forgotten_password.title: 'Mot de passe oublié'
+forgotten_password.message: 'Veuillez renseigner votre adresse email afin que nous puissions vous envoyer un nouveau mot de passe.'

@@ -1,168 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Administration du site</title>
-  <!-- Bootstrap core CSS-->
-  <link href="{{ asset("vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="{{asset("vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="{{asset("vendor/datatables/dataTables.bootstrap4.css")}}" rel="stylesheet">
-  <!-- Custom styles for this template-->
-  <link href="{{asset("css/sb-admin.css")}}" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Administration du site</title>
+        <!-- Bootstrap core CSS-->
+        <link href="{{ asset("vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <!-- Custom fonts for this template-->
+        <link href="{{asset("vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet" type="text/css">
+        <!-- Page level plugin CSS-->
+        <link href="{{asset("vendor/datatables/dataTables.bootstrap4.css")}}" rel="stylesheet">
+        <!-- Custom styles for this template-->
+        <link href="{{asset("css/sb-admin.css")}}" rel="stylesheet">
+    </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a href="{{path('home')}}"><img class="logo" src="{{ asset("layout_front/images/logoCodex.png") }}" alt="LogoCodex" width="165px"></a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="{{path('admin_dashboard')}}">
-            <i class="fa fa-users"></i>
-            <span class="nav-link-text"> Gestion des utilisateurs</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Edition de pages</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-              <a href="{{path('product_dashboard')}}">Produits</a>
-            </li>
-            <li>
-              <a href="{{path('category_dashboard')}}">Catégories</a>
-            </li>
-            <li>
-              <a href="{{path('blog_dashboard')}}">Blog</a>
-            </li>
-            <li>
-              <a href="{{path('download_dashboard')}}">Download</a>
-            </li>
-            <li>
-              <a href="{{path('esperso_dashboard')}}">Espace perso</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-          
-          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-            <li>
-              <a href="login.html">Login Page</a>
-            </li>
-            <li>
-              <a href="register.html">Registration Page</a>
-            </li>
-            <li>
-              <a href="forgot-password.html">Forgot Password Page</a>
-            </li>
-            <li>
-              <a href="blank.html">Blank Page</a>
-            </li>
-          </ul>
-        </li>
-
-      </ul>
-      <ul class="navbar-nav sidenav-toggler">
-        <li class="nav-item">
-          <a class="nav-link text-center" id="sidenavToggler">
-            <i class="fa fa-fw fa-angle-left"></i>
-          </a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="content-wrapper">
-    <div class="container-fluid">
-      
-        <div class="jumbotron text-center jumbo-dash"><h2><i class="fa fa-tachometer"></i> CODEX International Dashboard</h2></div>
-        
-      <!-- Example DataTables Card-->
-      {% block body %} {% endblock %}
-    </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
-      <div class="container">
-        <div class="text-center">    
-            <p class="copyright">© 2018 &copy; codex_international <a href="http://codex-international.com"></a>. All rights reserved.</p>
-
-        </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    
-        <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <a href="{{path('home')}}"><img class="logo" src="{{ asset("layout_front/images/logoCodex.png") }}" alt="LogoCodex" width="165px"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="{{path('logout')}}">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                        <a class="nav-link" href="{{path('admin_dashboard')}}">
+                            <i class="fa fa-users"></i>
+                            <span class="nav-link-text"> Gestion des utilisateurs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{asset("vendor/jquery/jquery.min.js")}}"></script>
-    <script src="{{asset("vendor/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
-    
-    <!-- Core plugin JavaScript-->
-    <script src="{{asset("vendor/jquery-easing/jquery.easing.min.js")}}"></script>
-    
-    <!-- Page level plugin JavaScript-->
-    <script src="{{asset("vendor/datatables/jquery.dataTables.js")}}"></script>
-    <script src="{{asset("vendor/datatables/dataTables.bootstrap4.js")}}"></script>
-    
-    <!-- Custom scripts for all pages-->
-    <script src="{{asset("js/sb-admin.min.js")}}"></script>
-    
-    <!-- Custom scripts for this page-->
-    <script src="{{asset("js/sb-admin-datatables.min.js")}}"></script>
-    
-   <!-- CK Document editor -->
-    <script src="{{ asset("https://cdn.ckeditor.com/ckeditor5/10.0.0/decoupled-document/ckeditor.js") }}"></script>
-    
-    {% block javascripts %}{% endblock %}
-  </div>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Edition de pages</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseComponents">
+                            <li>
+                                <a href="{{path('product_dashboard')}}">Produits</a>
+                            </li>
+                            <li>
+                                <a href="{{path('category_dashboard')}}">Catégories</a>
+                            </li>
+                            <li>
+                                <a href="{{path('blog_dashboard')}}">Blog</a>
+                            </li>
+                            <li>
+                                <a href="{{path('download_dashboard')}}">Download</a>
+                            </li>
+                            <li>
+                                <a href="{{path('esperso_dashboard')}}">Espace perso</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+
+                        <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                            <li>
+                                <a href="login.html">Login Page</a>
+                            </li>
+                            <li>
+                                <a href="register.html">Registration Page</a>
+                            </li>
+                            <li>
+                                <a href="forgot-password.html">Forgot Password Page</a>
+                            </li>
+                            <li>
+                                <a href="blank.html">Blank Page</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav sidenav-toggler">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" id="sidenavToggler">
+                            <i class="fa fa-fw fa-angle-left"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link  btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                <div class="jumbotron text-center jumbo-dash"><h2><i class="fa fa-tachometer"></i> CODEX International Dashboard</h2></div>
+
+                <!-- Example DataTables Card-->
+                {% block body %} {% endblock %}
+            </div>
+            <!-- /.container-fluid-->
+            <!-- /.content-wrapper-->
+            <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">    
+                        <p class="copyright">© 2018 &copy; codex_international <a href="http://codex-international.com"></a>. All rights reserved.</p>
+
+                    </div>
+                </div>
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="{{path('logout')}}">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="{{asset("vendor/jquery/jquery.min.js")}}"></script>
+            <script src="{{asset("vendor/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
+
+            <!-- Core plugin JavaScript-->
+            <script src="{{asset("vendor/jquery-easing/jquery.easing.min.js")}}"></script>
+
+            <!-- Page level plugin JavaScript-->
+            <script src="{{asset("vendor/datatables/jquery.dataTables.js")}}"></script>
+            <script src="{{asset("vendor/datatables/dataTables.bootstrap4.js")}}"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="{{asset("js/sb-admin.min.js")}}"></script>
+
+            <!-- Custom scripts for this page-->
+            <script src="{{asset("js/sb-admin-datatables.min.js")}}"></script>
+
+            <!-- CK Document editor -->
+            <script src="{{ asset("https://cdn.ckeditor.com/ckeditor5/10.0.0/decoupled-document/ckeditor.js") }}"></script>
+            <script>
+                $(function () {
+                  $('a.btn-danger').click(function (e) {
+                    e.preventDefault();
+                    var href = $(this).attr('href');
+                    var title = $(this).attr('title');
+                    var action = title ? title : "cette action";
+
+                    var rep = confirm('Êtes-vous sûr de vouloir effectuer ' + action + ' ?');
+                    if (rep) {
+                      window.location = href;
+                    }
+                  });
+                });
+            </script>
+        {% block javascripts %}{% endblock %}
+    </div>
 </body>
 
 </html>

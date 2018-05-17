@@ -40,4 +40,13 @@ Category_10: Optic
 Category_11: Microscopy
 form_product.label.title: Title
 form_product.label.description: Description
+form_forgotten_password.email: Your email address
+form_forgotten_password.submit: Send me a new password
+form.login.forgottenpassword: 'Forgotten password ?'
+email_not_found: The email "{{ value }}" was not found in database.
+forgotten_password.email.subject: 'Your new password'
+new_password_sent: 'A new password has been sent to you by email'
+new_password_not_sent: 'Your new password could not be sent. Please contact an administrator to solve your problem.'
+forgotten_password.title: 'Forgotten password'
+forgotten_password.message: 'Please give us your email address. We''ll send a new password to you.'
 
