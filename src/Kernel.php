@@ -36,10 +36,10 @@ class Kernel extends BaseKernel
         }
         
         // recherche ck editor, easyAdmin...
-        $bundles = array(
-            // ...
-            new EasyAdminBundle(),
-        );
+//        $bundles = array(
+//            // ...
+//            new EasyAdminBundle(),
+//        );
 
     }
 

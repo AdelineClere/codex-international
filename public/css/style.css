@@ -42,6 +42,9 @@ a:focus, a:hover {
 .btn-locale .btn-fr{
     width: 25px;  
 }
+.btn-locale .btn-gb{
+    margin-right: 25px;  
+}
 .btn-locale .btn {
     padding: 0;
     float: right;
@@ -235,16 +238,35 @@ a:focus, a:hover {
     padding-bottom: 20px;
     color: #bd7718;
 }
-.why-us h3 {
-    color: #3f3934;
-    font-weight: bold;
-}
+/*.theme {
+    padding: 0;
+    margin-bottom: 10px;
+}*/
+/*.sous-theme {
+    color: #72655c;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+}*/
+/*h3 .sous-theme {
+    margin: 0;
+    color: #bd7718;
+}*/
 .why-us a {
     color: #bd7718
 }
 .why-us a:focus, a:hover {
     color: #72655c;
     font-size: 18px;
+}
+.why-us {
+    margin-bottom: 80px;
+}
+.iso-9001 {
+    width: 20%;
+}
+.iso-9001:hover{
+    transform:scale(3);
 }
 /***************** downloads **************/
 
@@ -329,10 +351,19 @@ a:focus, a:hover {
     margin-bottom: 10px;
     list-style-type: none; 
 }
-
+.category-pdt {
+    margin-bottom: 80px;
+}
 
 /* ------------- login_register -------------- */
 
+.enregistrement {
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+.connexion {
+    margin-top: 80px;
+}
 .overly:before, .page-title:before, .slider:before {
     background: #3f3934;
 }
@@ -371,9 +402,6 @@ a:focus, a:hover {
 
 /***************** espace/perso **************/
 
-.acces-dashboard {
-    
-}
 .acces-dashboard a {
     color: black;
 }
