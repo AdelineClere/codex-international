@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7790963de275a55e6699523094970759",
+    "content-hash": "f161210676bcbd10daec78d32a2df01f",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2155,6 +2155,58 @@
                 "controllers"
             ],
             "time": "2018-02-14T08:40:54+00:00"
+        },
+        {
+            "name": "stinger/ckeditor-colorbutton-bundle",
+            "version": "4.5.6",
+            "target-dir": "Stinger/CKEditorColorButtonBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stinger-Soft/CKEditorColorButtonBundle.git",
+                "reference": "5597e3b0a1ec12cd3cd4b8d0db5b3ea175a59108"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stinger-Soft/CKEditorColorButtonBundle/zipball/5597e3b0a1ec12cd3cd4b8d0db5b3ea175a59108",
+                "reference": "5597e3b0a1ec12cd3cd4b8d0db5b3ea175a59108",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": ">=2.1"
+            },
+            "suggest": {
+                "Trsteel/ckeditor-bundle": "The CKEditor Bundle we're using ;)"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Stinger\\CKEditorColorButtonBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0",
+                "GPL-3.0",
+                "MPL",
+                "CKSource CDL"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Kotte",
+                    "email": "oliver.kotte@stinger-soft.net",
+                    "homepage": "http://www.stinger-soft.net"
+                }
+            ],
+            "description": "Symfony2 Bundle to integrate the CKEditor plugin Color Button",
+            "homepage": "http://ckeditor.com/addon/colorbutton",
+            "keywords": [
+                "CKEditor",
+                "button",
+                "color",
+                "plugin",
+                "symfony"
+            ],
+            "time": "2016-01-13T07:56:50+00:00"
         },
         {
             "name": "studio-42/elfinder",

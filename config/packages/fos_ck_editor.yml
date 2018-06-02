@@ -1,9 +1,15 @@
 fos_ck_editor:
     default_config: default
+    plugins:
+        colorbutton:
+            path: 'bundles/stingerckeditorcolorbutton'
+            filename: "plugin.js"
     configs:
         default:
+            extraPlugins: "colorbutton"
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
-            toolbar: [[ "Format", "Bold", "Italic", "Link", "Unlink", "BulletedList", "NumberedList", "BlockQuote", "Image" ]]
-            format_tags: 'p;h1;h2;h3;h4;h5;h6'
+            toolbar: [[ "Format", "Bold", "Italic", "Link", "Unlink", "BulletedList", "NumberedList", "BlockQuote", "Image", "TextColor"]]
+            format_tags: 'p;h1;h2;h3;h4;h5;h6' 
+            colorButton_colors: 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16'
             

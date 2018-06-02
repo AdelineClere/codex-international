@@ -16,4 +16,5 @@ return [
     Uerka\TranslationFormBundle\UerkaTranslationFormBundle::class => ['all' => true],
     FM\ElfinderBundle\FMElfinderBundle::class => ['all' => true],
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
+    Stinger\CKEditorColorButtonBundle\StingerCKEditorColorButtonBundle::class => ['all' => true],
 ];
