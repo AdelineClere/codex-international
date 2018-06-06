@@ -11,7 +11,7 @@ rappel: We call you back
 home: 'Why us?'
 downloads: Downloads
 download: Download
-espace: 'Your space'
+espace: 'My account'
 blog: Blog
 contact: 'Contact us'
 transmis: Your message has been sent, we will contact you quickly!
@@ -27,17 +27,18 @@ Codex_fabrication: Codex International
 Codex_fabrication2: Manufacturing & Services
 Codex_fournisseur: Codex International
 Codex_fournisseur2: Supplier
-Category_1: Thin film materials
-Category_2: Sputtering target
-Category_3: Evaporation material
-Category_4: Wires, Foils, Plates
-Category_5: Precious metal
-Category_6: Wafer
-Category_7: Services
-Category_8: Vacuum pump
-Category_9: Thin film
-Category_10: Optic
-Category_11: Microscopy
+Category_1: Materials
+#Category_2: Sputtering targets
+#Category_3: Backing Plates
+#Category_4: Evaporation material
+#Category_5: Wires, Foils, Plates
+#Category_6: Precious metal
+Category_2: Wafer
+Category_3: Services
+Category_4: Instrumentation
+Category_5: Consumables
+Category_6: Optic
+Category_7: Organic Electronic
 form_product.label.title: Title
 form_product.label.description: Description
 form_forgotten_password.email: Your email address
